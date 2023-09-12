@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
+import gradient from 'gradient-string';
 import type { ExecException } from 'node:child_process';
 import { exec } from 'node:child_process';
-import gradient from 'gradient-string';
 
 const runCommand = (
   command: string,

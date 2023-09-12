@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
-import { execSync } from 'node:child_process';
 import gradient from 'gradient-string';
+import { execSync } from 'node:child_process';
 
 const runPrepareScript = () => {
   try {

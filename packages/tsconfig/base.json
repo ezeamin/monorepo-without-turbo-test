@@ -15,15 +15,7 @@
     "strictNullChecks": true,
     "strict": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "paths": {
-      "@/*": [
-        "./ui/.eslintrc.cjs",
-        "./ui/config/pre-build.ts",
-        "./ui/config/prepare-project.ts",
-        "./ui/commitlint.config.ts"
-      ]
-    }
+    "jsx": "react-jsx"
   },
   "exclude": ["node_modules"]
 }

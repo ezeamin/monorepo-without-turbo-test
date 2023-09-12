@@ -3,18 +3,15 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "npx tsx ./config/pre-build.ts --ignore-build",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "husky install"
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@types/gradient-string": "^1.1.2",
     "eslint": "^8.48.0",
-    "gradient-string": "^2.0.2",
-    "husky": "^8.0.0",
     "prettier": "^3.0.3",
     "tsconfig": "workspace:*",
-    "turbo": "latest"
+    "turbo": "latest",
+    "typescript": "^5.2.2"
   },
   "packageManager": "pnpm@8.6.10",
   "name": "puas-monorepo"

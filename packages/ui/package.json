@@ -5,15 +5,18 @@
   "types": "./index.tsx",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "npx tsx ./config/pre-build.ts --ignore-build --fix",
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
     "@turbo/gen": "^1.10.12",
+    "@types/gradient-string": "^1.1.2",
     "@types/node": "^20.5.2",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "eslint-config-custom": "workspace:*",
+    "gradient-string": "^2.0.2",
+    "husky": "^8.0.0",
     "react": "^18.2.0",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.2"

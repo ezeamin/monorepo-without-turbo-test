@@ -14,10 +14,8 @@
     "skipLibCheck": true,
     "strictNullChecks": true,
     "strict": true,
-    "noEmit": true
-
-
-    
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
   "exclude": ["node_modules"]
 }

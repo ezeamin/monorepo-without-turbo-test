@@ -11,6 +11,8 @@
     "prettier:write": "npx prettier -w ."
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-angular": "^17.7.0",
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "@turbo/gen": "^1.10.12",
     "@types/gradient-string": "^1.1.2",

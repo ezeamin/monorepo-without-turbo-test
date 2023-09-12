@@ -13,17 +13,11 @@
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
-
-    "useDefineForClassFields": true,
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "noEmit": true,
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true
+    "noEmit": true
+
+
+    
   },
   "exclude": ["node_modules"]
 }

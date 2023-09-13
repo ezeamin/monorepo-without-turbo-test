@@ -3,11 +3,17 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
+    "lint": "turbo run lint --no-cache",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-angular": "^17.7.0",
+    "@types/gradient-string": "^1.1.2",
+    "@types/node": "^17.0.12",
     "eslint": "^8.48.0",
+    "gradient-string": "^2.0.2",
+    "husky": "^8.0.0",
     "prettier": "^3.0.3",
     "tsconfig": "workspace:*",
     "turbo": "latest",

@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "generate:component": "turbo gen react-component",
-    "lint": "npx tsx ../config/pre-build.ts --ignore-build --fix --no-cache",
+    "lint": "npx tsx ../config/pre-build.ts --ignore-build --fix",
     "prettier:check": "npx prettier -c .",
     "prettier:write": "npx prettier -w ."
   },

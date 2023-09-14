@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import gradient from 'gradient-string';
 import { execSync } from 'node:child_process';
+import * as readline from 'readline';
 
 const runPrepareScript = () => {
   try {
@@ -10,17 +11,17 @@ const runPrepareScript = () => {
     // Run husky install
     process.stdout.write('⌛ (1/3) Installing Husky...');
     execSync('husky install');
-    process.stdout.clearLine(0);
-    process.stdout.cursorTo(0);
+    readline.clearLine(process.stdout, 0);
+    readline.cursorTo(process.stdout, 0);
     process.stdout.write('✅ (1/3) Installed Husky\n');
 
     // Install global dependencies
     process.stdout.write('⌛ (2/3) Installing global dependencies...');
     execSync(
-      'npm install npm-check-updates typescript prettier eslint @trivago/prettier-plugin-sort-imports -g --ignore-scripts --silent'
+      'pnpm install npm-check-updates typescript prettier eslint @trivago/prettier-plugin-sort-imports -g --silent'
     );
-    process.stdout.clearLine(0);
-    process.stdout.cursorTo(0);
+    readline.clearLine(process.stdout, 0);
+    readline.cursorTo(process.stdout, 0);
     process.stdout.write('✅ (2/3) Installed global dependencies\n');
 
     // Check for dependency updates

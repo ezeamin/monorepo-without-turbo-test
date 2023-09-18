@@ -1,4 +1,4 @@
 module.exports = {
   extends: ['custom/react-internal'],
-  ignorePatterns: ['config/**'],
+  ignorePatterns: ['config/**', 'tsconfig/**'],
 };

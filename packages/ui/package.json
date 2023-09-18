@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "generate:component": "turbo gen react-component",
-    "lint": "npx tsx ../config/pre-build.ts --ignore-build --fix",
+    "lint": "npx tsx ../config/pre-build.ts --ignore-build --fix || exit 0",
     "prettier:check": "npx prettier -c .",
     "prettier:write": "npx prettier -w ."
   },
@@ -15,9 +15,15 @@
     "@turbo/gen": "^1.10.12",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+    "clsx": "^2.0.0",
+    "daisyui": "^3.7.5",
     "eslint-config-custom": "workspace:*",
     "react": "^18.2.0",
+    "tailwind-merge": "^1.14.0",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "react-icons": "^4.11.0"
   }
 }

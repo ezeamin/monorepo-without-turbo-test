@@ -1,0 +1,19 @@
+.husky/
+build/
+coverage/
+dist/
+logs/
+node_modules/
+
+.env
+
+# Apps
+apps/*/node_modules/
+
+# Packages
+packages/*/build/
+packages/*/coverage/
+packages/*/dist/
+packages/*/node_modules/
+packages/config/
+packages/eslint-config-custom/

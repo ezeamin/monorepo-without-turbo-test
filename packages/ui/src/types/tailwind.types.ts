@@ -114,21 +114,21 @@ export interface TextColorProp {
 }
 
 export interface TextColorType {
-    dark:
-      | 'text-inherit'
-      | 'text-current'
-      | 'text-transparent'
-      | 'text-black'
-      | 'text-white'
-      | `text-${ColorNameType}-${ColorIntensityType}`;
-    light:
-      | 'text-inherit'
-      | 'text-current'
-      | 'text-transparent'
-      | 'text-black'
-      | 'text-white'
-      | `text-${ColorNameType}-${ColorIntensityType}`;
-  }
+  dark:
+    | 'text-inherit'
+    | 'text-current'
+    | 'text-transparent'
+    | 'text-black'
+    | 'text-white'
+    | `text-${ColorNameType}-${ColorIntensityType}`;
+  light:
+    | 'text-inherit'
+    | 'text-current'
+    | 'text-transparent'
+    | 'text-black'
+    | 'text-white'
+    | `text-${ColorNameType}-${ColorIntensityType}`;
+}
 
 export type WidthType =
   | 'w-auto'

@@ -2,6 +2,7 @@
 
 import { useMemo } from 'react';
 import { IconContext } from 'react-icons';
+
 import type { IconPropsType } from './Icon.types';
 
 /**

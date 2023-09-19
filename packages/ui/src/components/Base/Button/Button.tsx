@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+
 import { cn } from '../../../helpers/cn';
 import { removeLineBreaks } from '../../../helpers/utils';
 import Icon from '../../Utils/Icon/Icon';
@@ -157,17 +158,21 @@ function Button(props: ButtonType) {
       type={type}
       value={value}
     >
-      {startIcon ? <Icon
+      {startIcon ? (
+        <Icon
           iconComponent={startIcon.iconComponent}
           title={startIcon.title || `icon-start-button-${children}`}
-        /> : null}
+        />
+      ) : null}
 
       {children}
 
-      {endIcon ? <Icon
+      {endIcon ? (
+        <Icon
           iconComponent={endIcon.iconComponent}
           title={endIcon.title || `icon-end-button-${children}`}
-        /> : null}
+        />
+      ) : null}
     </button>
   );
 }

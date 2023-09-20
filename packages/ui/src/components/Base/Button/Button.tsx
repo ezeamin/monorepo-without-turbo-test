@@ -75,7 +75,7 @@ const generateAriaLabel = (
  * <Button outlineButton color="btn-accent" size="btn-lg">Outlined Button</Button>
  */
 
-function Button(props: ButtonType) {
+const Button = (props: ButtonType) => {
   const {
     activeButton = false,
     ariaHidden = false,
@@ -175,6 +175,6 @@ function Button(props: ButtonType) {
       ) : null}
     </button>
   );
-}
+};
 
 export default Button;

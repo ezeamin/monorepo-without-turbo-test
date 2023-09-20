@@ -1,6 +1,4 @@
-import * as React from 'react';
-
-export function Card({
+export const Card = ({
   className,
   title,
   children,
@@ -10,7 +8,7 @@ export function Card({
   title: string;
   children: React.ReactNode;
   href: string;
-}): JSX.Element {
+}): JSX.Element => {
   return (
     <a
       className={className}
@@ -24,4 +22,4 @@ export function Card({
       <p>{children}</p>
     </a>
   );
-}
+};

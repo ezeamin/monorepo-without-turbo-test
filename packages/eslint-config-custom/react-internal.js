@@ -16,10 +16,10 @@ module.exports = {
     project,
   },
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    // 'react-refresh/only-export-components': [
+    //   'warn',
+    //   { allowConstantExport: true },
+    // ],
 
     'no-param-reassign': 'off',
 
@@ -43,6 +43,17 @@ module.exports = {
     ],
 
     'react/react-in-jsx-scope': 'off',
+
+    'unicorn/filename-case': [
+      'error',
+      {
+        cases: {
+          camelCase: true, // Permite nombres en camelCase (primera letra en minúscula)
+          pascalCase: true, // Permite nombres en PascalCase (primera letra en mayúscula)
+          kebabCase: false, // Deshabilita kebab-case
+        },
+      },
+    ],
   },
   settings: {
     // 'import/resolver': {

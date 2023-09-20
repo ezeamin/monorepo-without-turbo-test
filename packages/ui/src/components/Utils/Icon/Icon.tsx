@@ -32,7 +32,7 @@ import type { IconPropsType } from './Icon.types';
  * For example, if using the `MdCalculator` icon component, the default `title` attribute would be `icon-MdCalculator`.
  */
 
-function Icon(props: IconPropsType) {
+const Icon = (props: IconPropsType) => {
   const {
     className,
     color,

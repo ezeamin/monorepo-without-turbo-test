@@ -2,7 +2,7 @@
  * Usage with template literals. To call the function, do not use parentheses.
  * @param strings
  * @param values
- * @returns {string}
+ * @returns string
  */
 export const removeLineBreaks = (
   strings: TemplateStringsArray,

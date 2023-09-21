@@ -154,6 +154,7 @@ const Button = (props: ButtonType): JSX.Element => {
       name={name}
       onClick={onClick}
       tabIndex={tabIndex}
+      // eslint-disable-next-line react/button-has-type
       type={type}
       value={value}
     >

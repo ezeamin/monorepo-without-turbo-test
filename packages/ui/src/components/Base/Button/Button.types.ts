@@ -36,7 +36,7 @@ interface ButtonColorType {
 export type ButtonType = React.ButtonHTMLAttributes<HTMLButtonElement> &
   DataTestId & {
     /**
-     * @summary Use either activeButton or outlineButton, not both.
+     * @remarks either activeButton or outlineButton, not both.
      */
     activeButton?: boolean;
     ariaHidden?: boolean;
@@ -54,7 +54,7 @@ export type ButtonType = React.ButtonHTMLAttributes<HTMLButtonElement> &
     glass?: boolean;
     name?: string;
     /**
-     * @summary Use either activeButton or outlineButton, not both.
+     * @remarks Use either activeButton or outlineButton, not both.
      */
     outlineButton?: boolean;
     size?: 'btn-xs' | 'btn-sm' | 'btn-md' | 'btn-lg';

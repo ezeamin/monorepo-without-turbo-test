@@ -33,7 +33,7 @@ module.exports = {
 
     'no-param-reassign': 'off',
 
-    'import/prefer-default-export': 'error',
+    'import/prefer-default-export': 'off',
 
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-unused-vars': 'error',

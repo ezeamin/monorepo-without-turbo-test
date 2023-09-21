@@ -23,7 +23,7 @@ module.exports = {
     'enhanced-scope-enum': [
       2,
       'always',
-      ['global','package/config', 'package/eslint', 'package/tsconfig', 'package/ui'],
+      ['global','packages/config', 'packages/eslint', 'packages/tsconfig', 'packages/ui'],
     ],
     'header-min-length': [2, 'always', 10],
     'header-max-length': [2, 'always', 120],

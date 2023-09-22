@@ -6,6 +6,9 @@ logs/
 node_modules/
 
 .env
+commitlint.config.ts
+postcss.config.ts
+tailwind.config.ts
 
 # Apps
 apps/*/node_modules/

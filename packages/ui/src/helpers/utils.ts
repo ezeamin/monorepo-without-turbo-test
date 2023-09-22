@@ -1,7 +1,7 @@
 /**
  * Usage with template literals. To call the function, do not use parentheses.
- * @param strings
- * @param values
+ * @param strings -
+ * @param values -
  * @returns string
  */
 export const removeLineBreaks = (
@@ -13,7 +13,7 @@ export const removeLineBreaks = (
   for (let i = 0; i < strings.length; i += 1) {
     result += strings[i];
     if (i < values.length) {
-      result += values[i];
+      result += String(values[i]);
     }
   }
 

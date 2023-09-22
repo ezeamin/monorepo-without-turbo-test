@@ -19,7 +19,7 @@ import type { IconPropsType } from './Icon.types';
  * ```
  * - Standalone usage:
  * <Icon iconComponent={SomeIcon} color="#FF0000" size="2em" />
- * // In this example, the `color` and `size` props will be applied to the icon.
+ * In this example, the `color` and `size` props will be applied to the icon.
  *
  * @example
  * - Usage within another component:

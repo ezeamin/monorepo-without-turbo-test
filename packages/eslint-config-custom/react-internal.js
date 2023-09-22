@@ -13,11 +13,9 @@ const project = resolve(process.cwd(), 'tsconfig.json');
 
 module.exports = {
   extends: [
-    "@vercel/style-guide/eslint/node" ,
+    '@vercel/style-guide/eslint/node',
     '@vercel/style-guide/eslint/react',
-    "@vercel/style-guide/eslint/typescript",
-    // TODO: verificar si importa las rules
-    // require.resolve('./rules/react'), 
+    '@vercel/style-guide/eslint/typescript',
   ].map(require.resolve),
   globals: {
     JSX: true,
@@ -26,25 +24,34 @@ module.exports = {
     project,
   },
   rules: {
-    // 'react-refresh/only-export-components': [
-    //   'warn',
-    //   { allowConstantExport: true },
-    // ],
-
-    'no-param-reassign': 'off',
-
-    'import/prefer-default-export': 'off',
-
+    // Disables the rule that prohibits empty interfaces in TypeScript.
     '@typescript-eslint/no-empty-interface': 'off',
+
+    // Marks unused variables in TypeScript as errors.
     '@typescript-eslint/no-unused-vars': 'error',
 
-    'import/extensions': 'off', // no extensions are needed in import statements
-    'react/jsx-props-no-spreading': 'off',
-    'import/order': 'off', // customized order in .prettierrc
-    'func-names': 'off', // disabled to allow IIFEs
-    'import/no-extraneous-dependencies': 'off', // disabled to allow devDependencies
-    'react/require-default-props': 'off', // deprecated check
+    // Allows the use of anonymous functions (IIFEs).
+    'func-names': 'off',
 
+    // No need to specify extensions in imports.
+    'import/extensions': 'off',
+
+    // Disables the rule that prohibits default exports.
+    'import/no-default-export': 'off',
+
+    // Allows additional dependencies in development files.
+    'import/no-extraneous-dependencies': 'off',
+
+    // Disables the custom import order rule.
+    'import/order': 'off',
+
+    // Disables the rule that prohibits parameter reassignment.
+    'no-param-reassign': 'off',
+
+    // Allows props spreading in JSX.
+    'react/jsx-props-no-spreading': 'off',
+
+    // Defines how React function components should be written.
     'react/function-component-definition': [
       'error',
       {
@@ -53,27 +60,31 @@ module.exports = {
       },
     ],
 
-    'react/react-in-jsx-scope': 'off',
+    // Disables checking for default props in React components.
+    'react/require-default-props': 'off',
 
-    'eslint-comments/no-unused-disable': 'off',
-
+    // Disables the rule that prohibits "kebab-case" in file names.
     'unicorn/filename-case': [
       'error',
       {
         cases: {
-          camelCase: true, // Permite nombres en camelCase (primera letra en minúscula)
-          pascalCase: true, // Permite nombres en PascalCase (primera letra en mayúscula)
-          kebabCase: false, // Deshabilita kebab-case
+          camelCase: true, // Allows camelCase file names (initial letter in lowercase)
+          pascalCase: true, // Allows PascalCase file names (initial letter in uppercase)
+          kebabCase: false, // Disables kebab-case
         },
       },
     ],
+
+    // Disables checking for unnecessary eslint-disable comments.
+    // 'eslint-comments/no-unused-disable': 'off',
+
+    // Example rule for using React with Fast Refresh.
+    // 'react-refresh/only-export-components': [
+    //   'warn',
+    //   { allowConstantExport: true },
+    // ],
   },
   settings: {
-    // 'import/resolver': {
-    //   typescript: {
-    //     project,
-    //   },
-    // },
     react: {
       version: 'detect',
     },

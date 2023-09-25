@@ -125,10 +125,6 @@ export default function Page(): JSX.Element {
         </div>
       </div>
 
-      <Button colorDark="bg-slate-700" colorLight="bg-gray-100" dti="example">
-        BUTTON COMPONENT
-      </Button>
-
       <div className={styles.grid}>
         {LINKS.map(({ title, href, description }) => (
           <Card className={styles.card} href={href} key={title} title={title}>
@@ -136,6 +132,15 @@ export default function Page(): JSX.Element {
           </Card>
         ))}
       </div>
+
+      <Button
+        colorDark="bg-slate-700"
+        colorLight="bg-gray-100"
+        dti="example"
+        textColorLight="text-blue-700"
+      >
+        BUTTON COMPONENT
+      </Button>
     </main>
   );
 }

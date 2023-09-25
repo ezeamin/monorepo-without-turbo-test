@@ -1,29 +1,9 @@
-/** @type {import('tailwindcss').Config} */
+// /** @type {import('tailwindcss').Config} */
 import daisyuiLib from 'daisyui';
+import type { Config } from 'tailwindcss';
+
 import daisyuiTheme from 'daisyui/src/theming/themes';
 
-export const content = ['./src/**/*.{js,ts,jsx,tsx,mdx}'];
-export const darkMode = ['class', '[data-theme="dark"]'];
-export const theme = {
-  extend: {
-    backgroundImage: {
-      'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-      'gradient-conic':
-        'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-    },
-    colors: {
-      accent: '#3fa9a6',
-      'base-100': '#345ca8',
-      error: '#dc2828',
-      info: '#6366f1',
-      neutral: '#3b8bc4',
-      primary: '#3f75a8',
-      secondary: '#723fa8',
-      success: '#16a249',
-      warning: '#fbbf24',
-    },
-  },
-};
 export const daisyui = {
   themes: [
     {
@@ -61,4 +41,34 @@ export const daisyui = {
     },
   ],
 };
-export const plugins = [daisyuiLib];
+
+const config: Config = {
+  content: [
+    '../ui/src/**/*.{js,ts,jsx,tsx,mdx}',
+    '../../apps/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  darkMode: ['class', '[data-theme="dark"]'],
+  plugins: [daisyuiLib],
+  theme: {
+    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      colors: {
+        accent: '#3fa9a6',
+        'base-100': '#345ca8',
+        error: '#dc2828',
+        info: '#6366f1',
+        neutral: '#3b8bc4',
+        primary: '#3f75a8',
+        secondary: '#723fa8',
+        success: '#16a249',
+        warning: '#fbbf24',
+      },
+    },
+  },
+};
+
+export default config;

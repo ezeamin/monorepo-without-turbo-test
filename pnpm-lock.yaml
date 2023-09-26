@@ -1,4 +1,4 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
 
 settings:
   autoInstallPeers: true
@@ -51,43 +51,6 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
-  apps/docs:
-    dependencies:
-      next:
-        specifier: ^13.4.19
-        version: 13.4.19(react-dom@18.2.0)(react@18.2.0)
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      ui:
-        specifier: workspace:*
-        version: link:../../packages/ui
-    devDependencies:
-      '@next/eslint-plugin-next':
-        specifier: ^13.4.19
-        version: 13.4.19
-      '@types/node':
-        specifier: ^17.0.12
-        version: 17.0.45
-      '@types/react':
-        specifier: ^18.0.22
-        version: 18.2.5
-      '@types/react-dom':
-        specifier: ^18.0.7
-        version: 18.2.3
-      eslint-config-custom:
-        specifier: workspace:*
-        version: link:../../packages/eslint-config-custom
-      tsconfig:
-        specifier: workspace:*
-        version: link:../../packages/tsconfig
-      typescript:
-        specifier: ^4.5.3
-        version: 4.9.5
-
   apps/web:
     dependencies:
       next:
@@ -106,6 +69,9 @@ importers:
       '@next/eslint-plugin-next':
         specifier: ^13.4.19
         version: 13.4.19
+      '@types/config':
+        specifier: ^3.3.1
+        version: 3.3.1
       '@types/node':
         specifier: ^17.0.12
         version: 17.0.45
@@ -115,21 +81,32 @@ importers:
       '@types/react-dom':
         specifier: ^18.0.7
         version: 18.2.3
+      autoprefixer:
+        specifier: ^10.4.16
+        version: 10.4.16(postcss@8.4.30)
+      config:
+        specifier: workspace:*
+        version: link:../../packages/config
       daisyui:
         specifier: ^3.7.7
         version: 3.7.7(ts-node@10.9.1)
       eslint-config-custom:
         specifier: workspace:*
         version: link:../../packages/eslint-config-custom
-      tailwind-config:
-        specifier: workspace:*
-        version: link:../../packages/tailwind-config
+      postcss:
+        specifier: ^8.4.20
+        version: 8.4.30
+      tailwindcss:
+        specifier: ^3.2.4
+        version: 3.3.3(ts-node@10.9.1)
       tsconfig:
         specifier: workspace:*
         version: link:../../packages/tsconfig
       typescript:
         specifier: ^4.5.3
         version: 4.9.5
+
+  packages/1: {}
 
   packages/config:
     devDependencies:
@@ -161,8 +138,6 @@ importers:
         specifier: ^48.0.1
         version: 48.0.1(eslint@8.49.0)
 
-  packages/tailwind-config: {}
-
   packages/tsconfig: {}
 
   packages/ui:
@@ -192,9 +167,6 @@ importers:
       react:
         specifier: ^18.2.0
         version: 18.2.0
-      tailwind-config:
-        specifier: workspace:*
-        version: link:../tailwind-config
       tsconfig:
         specifier: workspace:*
         version: link:../tsconfig
@@ -1153,6 +1125,10 @@ packages:
       - '@types/node'
       - supports-color
       - typescript
+    dev: true
+
+  /@types/config@3.3.1:
+    resolution: {integrity: sha512-ZhBk8IVIbc3cuES10j2I+xa3L68rpl1X35FdsNce/AiE7yJnhQaA7tvO5MRZblqpBny4OIddJ+WQL04I1933Zg==}
     dev: true
 
   /@types/glob@7.2.0:

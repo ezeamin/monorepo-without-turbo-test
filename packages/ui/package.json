@@ -18,7 +18,6 @@
     "clsx": "^2.0.0",
     "eslint-config-custom": "workspace:*",
     "react": "^18.2.0",
-    "tailwind-config": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.2"
   },

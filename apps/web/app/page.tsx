@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies -- no
 import { Button } from 'ui';
 
 const Home = () => {

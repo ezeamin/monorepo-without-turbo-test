@@ -4,7 +4,9 @@ import { useEffect, useState } from 'react';
 
 import { cn } from '../../../helpers/cn';
 import { removeLineBreaks } from '../../../helpers/utils';
+import '../../../styles/styles.css';
 import Icon from '../../Utils/Icon/Icon';
+import './Button.styles.css';
 import type { ButtonType } from './Button.types';
 
 /**
@@ -97,8 +99,8 @@ const Button = (props: ButtonType): JSX.Element => {
     sizeText = '',
     startIcon,
     tabIndex = 0,
-    textColorDark = 'text-emerald-900',
-    textColorLight = 'text-yellow-800',
+    textColorDark,
+    textColorLight,
     type = 'button',
     unstyled = false,
     value,

@@ -11,7 +11,13 @@ postcss.config.ts
 tailwind.config.ts
 
 # Apps
+apps/*/.next/
+apps/*/.turbo/
+apps/*/next-env.d.ts
+apps/*/next.config.js
 apps/*/node_modules/
+apps/*/postcss.config.js
+apps/*/tailwind.config.js
 
 # Packages
 packages/*/build/
@@ -20,4 +26,5 @@ packages/*/dist/
 packages/*/node_modules/
 packages/config/
 packages/eslint-config-custom/
+packages/global-styles/
 packages/tsconfig/

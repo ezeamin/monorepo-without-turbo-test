@@ -1,4 +1,5 @@
-import './globals.css';
+// eslint-disable-next-line import/no-extraneous-dependencies -- no
+import "global-styles/global.css";
 
 export default function RootLayout({
   children,

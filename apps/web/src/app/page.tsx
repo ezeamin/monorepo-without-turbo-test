@@ -8,6 +8,7 @@ const Home = () => {
         colorLight="bg-gray-100"
         dti="example"
         textColorLight="text-blue-700"
+        // unstyled
       >
         BUTTON COMPONENT
       </Button>

@@ -11,14 +11,15 @@
 // export default config;
 
 
+import daisyuiLib from 'daisyui';
 
 module.exports = {
   content: [
     '../../packages/ui/components/**/*.{ts,tsx}',
-    '../../apps/**/*.{ts,tsx}', // TODO: revisar
+    '../../apps/**/*.{ts,tsx}',
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [daisyuiLib],
 };

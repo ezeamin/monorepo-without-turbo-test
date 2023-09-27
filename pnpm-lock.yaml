@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -20,9 +20,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.16(postcss@8.4.30)
-      daisyui:
-        specifier: ^3.7.7
-        version: 3.7.7(ts-node@10.9.1)
       husky:
         specifier: ^8.0.3
         version: 8.0.3
@@ -87,9 +84,6 @@ importers:
       config:
         specifier: workspace:*
         version: link:../../packages/config
-      daisyui:
-        specifier: ^3.7.7
-        version: 3.7.7(ts-node@10.9.1)
       eslint-config-custom:
         specifier: workspace:*
         version: link:../../packages/eslint-config-custom
@@ -106,13 +100,14 @@ importers:
         specifier: ^4.5.3
         version: 4.9.5
 
-  packages/1: {}
-
   packages/config:
     devDependencies:
       '@types/gradient-string':
         specifier: ^1.1.2
         version: 1.1.2
+      daisyui:
+        specifier: ^3.7.7
+        version: 3.7.7(ts-node@10.9.1)
       gradient-string:
         specifier: ^2.0.2
         version: 2.0.2

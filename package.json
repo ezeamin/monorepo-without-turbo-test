@@ -17,7 +17,6 @@
     "@commitlint/config-angular": "^17.7.0",
     "@types/node": "^20.6.2",
     "autoprefixer": "^10.4.16",
-    "daisyui": "^3.7.7",
     "husky": "^8.0.3",
     "npm-check-updates": "^16.14.4",
     "postcss": "^8.4.20",

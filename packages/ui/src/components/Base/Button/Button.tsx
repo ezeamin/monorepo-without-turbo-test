@@ -7,7 +7,7 @@ import { removeLineBreaks } from '../../../helpers/utils';
 import '../../../styles/styles.css';
 import Icon from '../../Utils/Icon/Icon';
 import './Button.styles.css';
-import type { ButtonType } from './Button.types';
+import type { ButtonPropsType } from './Button.types';
 
 /**
  * Generates the ARIA label for the button.
@@ -18,7 +18,7 @@ import type { ButtonType } from './Button.types';
  * @returns The generated ARIA label for the button.
  */
 const generateAriaLabel = (
-  content: ButtonType['children'],
+  content: ButtonPropsType['children'],
   buttonAriaLabel: string | undefined,
   aditionalText: string | undefined
 ): string | undefined => {
@@ -79,7 +79,9 @@ const generateAriaLabel = (
  * ```
  */
 
-const Button = (props: ButtonType): JSX.Element => {
+// TODO: color del boton segun el tema 'dark:...'
+
+const Button = (props: ButtonPropsType): JSX.Element => {
   const {
     activeButton = false,
     ariaHidden = false,

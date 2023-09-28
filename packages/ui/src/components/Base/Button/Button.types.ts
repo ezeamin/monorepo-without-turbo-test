@@ -33,7 +33,7 @@ interface ButtonColorType {
     | `bg-${ColorNameType}-${ColorIntensityType}`;
 }
 
-export type ButtonType = React.ButtonHTMLAttributes<HTMLButtonElement> &
+export type ButtonPropsType = React.ButtonHTMLAttributes<HTMLButtonElement> &
   DataTestId & {
     /**
      * @remarks either activeButton or outlineButton, not both.

@@ -1,3 +1,6 @@
 packages:
   - "apps/*"
   - "packages/*"
+
+# exclude packages that are inside myself name directories
+# - '!**/config/*'

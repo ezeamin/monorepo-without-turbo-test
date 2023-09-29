@@ -1,9 +1,7 @@
 {
     "name": "global-styles",
-    "license": "ISC",
-    "version": "0.0.1",
+    "version": "0.0.0",
     "files": [
-      "global.css"
+        "global.css"
     ]
-  }
-  
+}

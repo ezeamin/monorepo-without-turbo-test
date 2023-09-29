@@ -1,0 +1,20 @@
+{
+    "name": "utilities",
+    "version": "0.0.1",
+    "main": "./index.tsx",
+    "types": "./index.tsx",
+    "license": "MIT",
+    "scripts": {
+      "lint": "npx tsx ../config/pre-build.ts --ignore-build --fix",
+      "prettier:check": "npx prettier -c .",
+      "prettier:write": "npx prettier -w ."
+    },
+    "devDependencies": {
+      "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+      "clsx": "^2.0.0",
+      "eslint-config-custom": "workspace:*",
+      "tsconfig": "workspace:*",
+      "typescript": "^5.2.2"
+    }
+  }
+  

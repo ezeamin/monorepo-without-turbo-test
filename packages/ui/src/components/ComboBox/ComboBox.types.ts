@@ -1,10 +1,10 @@
-import type { DataTestId } from '../../../types';
+import type { DataTestId } from '../../types';
 import type {
   BgColorProp,
   HeightType,
   TextColorProp,
   WidthType,
-} from '../../../types/tailwind.types';
+} from '../../types/tailwind';
 import type { IconPropsType } from '../../Utils/Icon/Icon.types';
 
 interface ComboBoxOption {

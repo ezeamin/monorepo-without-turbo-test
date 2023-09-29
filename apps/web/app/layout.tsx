@@ -1,14 +1,15 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- no
-import "global-styles/global.css";
+import 'global-styles/global.css';
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: {
   children: React.ReactNode;
-}): JSX.Element {
+}): JSX.Element => {
   return (
     <html lang="es">
       <body>{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;

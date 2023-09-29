@@ -1,7 +1,6 @@
-// eslint-disable-next-line import/no-extraneous-dependencies -- no
 import { Button } from 'ui';
 
-const Home = () => {
+const Home = (): JSX.Element => {
   return (
     <main className="bg-slate-200">
       <Button

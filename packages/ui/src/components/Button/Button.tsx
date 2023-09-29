@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from 'react';
 
+import Icon from '@/components/Icon/Icon';
+
 import { cn, removeLineBreaks } from 'utilities';
 
-import Icon from '@/components/Icon/Icon';
 import './Button.styles.css';
-import type { ButtonPropsType } from './Button.types';
-
 import '@/styles/styles.css';
+
+import type { ButtonPropsType } from './Button.types';
 
 /**
  * Generates the ARIA label for the button.

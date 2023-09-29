@@ -19,6 +19,7 @@ module.exports = {
     '@vercel/style-guide/eslint/react',
     '@vercel/style-guide/eslint/next',
     'eslint-config-turbo',
+    'next/core-web-vitals',
   ].map(require.resolve),
   parserOptions: {
     project,
@@ -28,7 +29,7 @@ module.exports = {
     JSX: true,
   },
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       typescript: {
         project,
       },
@@ -39,13 +40,12 @@ module.exports = {
   rules: {
     'import/no-default-export': 'off',
 
-    'import/no-extraneous-dependencies': [
+    // Defines how React function components should be written.
+    'react/function-component-definition': [
       'error',
       {
-        devDependencies: false,
-        optionalDependencies: false,
-        peerDependencies: false,
-        packageDir: './', // Ruta al directorio del proyecto actual
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
       },
     ],
 

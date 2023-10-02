@@ -1,7 +1,6 @@
 {
   "name": "eslint-config-custom",
-  "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.19",

@@ -1,7 +1,7 @@
 {
   "name": "config",
-  "license": "ISC",
-  "version": "0.0.1",
+  "version": "0.0.0",
+  "private": true,
   "devDependencies": {
     "@types/gradient-string": "^1.1.2",
     "daisyui": "^3.7.7",

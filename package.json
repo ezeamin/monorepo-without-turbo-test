@@ -6,31 +6,34 @@
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
+    "postinstall:check": "manypkg check",
+    "postinstall:fix": "manypkg fix",
     "prettier:check": "npx prettier -c .",
     "prettier:write": "npx prettier -w .",
     "prepare": "pnpm i tsx -g && tsx ./packages/config/prepare-project.ts",
     "remove:modules": "npx npkill .",
     "update:all": "ncu -u"
   },
-  "devDependencies": {
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-angular": "^17.7.0",
-    "@types/node": "^20.6.2",
-    "autoprefixer": "^10.4.16",
-    "husky": "^8.0.3",
-    "npm-check-updates": "^16.14.4",
-    "postcss": "^8.4.20",
-    "prettier": "^3.0.3",
-    "tailwind-merge": "^1.14.0",
-    "tailwindcss": "^3.2.4",
-    "tsconfig": "workspace:*",
-    "turbo": "latest",
-    "typescript": "^5.2.2"
-  },
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
-  "packageManager": "pnpm@8.8.0",
-  "name": "puas-monorepo"
+  "packageManager": "pnpm@8.8.10",
+  "name": "puas-monorepo",
+  "dependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-angular": "^17.7.0",
+    "@manypkg/cli": "latest",
+    "@types/node": "^20.7.1",
+    "autoprefixer": "^10.4.16",
+    "husky": "^8.0.3",
+    "npm-check-updates": "^16.14.4",
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.3",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "^3.3.3",
+    "tsconfig": "workspace:*",
+    "turbo": "latest",
+    "typescript": "^5.2.2"
+  }
 }

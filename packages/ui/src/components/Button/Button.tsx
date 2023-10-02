@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-import Icon from '@/components/Icon/Icon';
+import Icon from '@ui/components/Icon/Icon';
 
 import { cn, removeLineBreaks } from 'utilities';
 
@@ -81,8 +81,6 @@ const generateAriaLabel = (
  * ```
  */
 
-// TODO: color del boton segun el tema 'dark:...'
-
 const Button = (props: ButtonPropsType): JSX.Element => {
   const {
     activeButton = false,
@@ -90,7 +88,7 @@ const Button = (props: ButtonPropsType): JSX.Element => {
     ariaLabel,
     className = '',
     children,
-    colorDark,
+    colorDark = '',
     colorLight = '',
     dti,
     disabled = false,
@@ -103,8 +101,8 @@ const Button = (props: ButtonPropsType): JSX.Element => {
     sizeText = '',
     startIcon,
     tabIndex = 0,
-    textColorDark,
-    textColorLight,
+    textColorDark = '',
+    textColorLight = '',
     type = 'button',
     unstyled = false,
     value,
@@ -145,7 +143,7 @@ const Button = (props: ButtonPropsType): JSX.Element => {
       ${unstyled ? '' : 'btn'} 
       ${activeButton ? 'btn-active' : ''}
       ${colorLight} 
-      ${colorDark !== colorLight ? `dark:${colorDark}` : ''} 
+      ${colorDark} 
       ${glass ? 'glass' : ''}
       ${outlineButton ? 'btn-outline' : ''} 
       ${size}

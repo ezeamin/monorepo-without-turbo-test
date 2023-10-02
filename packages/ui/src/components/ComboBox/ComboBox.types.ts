@@ -1,12 +1,12 @@
-import type { IconPropsType } from '@/components/Icon/Icon.types';
+import type { IconPropsType } from '@ui/components/Icon/Icon.types';
 
-import type { DataTestId } from '@/types';
+import type { DataTestId } from '@ui/types';
 import type {
   BgColorProp,
   HeightType,
   TextColorProp,
   WidthType,
-} from '@/types/tailwind';
+} from '@ui/types/tailwind';
 
 interface ComboBoxOption {
   id: number;

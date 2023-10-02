@@ -115,12 +115,12 @@ export interface TextColorProp {
 
 export interface TextColorType {
   dark:
-    | 'text-inherit'
-    | 'text-current'
-    | 'text-transparent'
-    | 'text-black'
-    | 'text-white'
-    | `text-${ColorNameType}-${ColorIntensityType}`;
+    | 'dark:text-inherit'
+    | 'dark:text-current'
+    | 'dark:text-transparent'
+    | 'dark:text-black'
+    | 'dark:text-white'
+    | `dark:text-${ColorNameType}-${ColorIntensityType}`;
   light:
     | 'text-inherit'
     | 'text-current'

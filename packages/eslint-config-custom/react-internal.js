@@ -69,6 +69,12 @@ module.exports = {
       },
     ],
 
+    // Disables the rule that prohibits empty functions.
+    "@typescript-eslint/no-empty-function": "off",
+
+    // Allows use of "!!" to convert to boolean.
+    "no-implicit-coercion": "off",
+    
     // Disables checking for unnecessary eslint-disable comments.
     // 'eslint-comments/no-unused-disable': 'off',
 

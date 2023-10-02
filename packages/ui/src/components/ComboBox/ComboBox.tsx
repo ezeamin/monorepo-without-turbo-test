@@ -2,12 +2,12 @@
 
 import { Fragment, useEffect, useState } from 'react';
 
-import Button from '@/components/Button/Button';
-import Icon from '@/components/Icon/Icon';
+import Button from '@ui/components/Button/Button';
+import Icon from '@ui/components/Icon/Icon';
 
 import { cn } from 'utilities';
 
-import { DTI, DTI_LIST } from '@/dti/dti';
+import { DTI, DTI_LIST } from 'dti';
 
 import { Combobox, Transition } from '@headlessui/react';
 import { MdCheck, MdClear, MdExpandMore } from 'react-icons/md';
@@ -117,7 +117,7 @@ const ComboBox = (props: ComboBoxPropsType): JSX.Element => {
                 ariaHidden
                 className="absolute inset-y-0 right-0 flex items-center pr-3 h-auto"
                 // colorDark="dark:btn-ghost" // TODO: adaptar button para que pueda recibir color con tema
-                colorDark="bg-emerald-950" // TODO: adaptar button para que pueda recibir color con tema
+                colorDark="dark:bg-emerald-950" // TODO: adaptar button para que pueda recibir color con tema
                 colorLight="btn-ghost"
                 dti={DTI(DTI_LIST.BUTTON('clear-cmb'))}
                 onClick={handleClearSelection}

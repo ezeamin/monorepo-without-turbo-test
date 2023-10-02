@@ -24,10 +24,12 @@ module.exports = {
       2,
       'always',
       [
+        'apps/[module_name]',
         'global',
         'packages/config',
         'packages/eslint',
         'packages/styles',
+        'packages/tailwind',
         'packages/tsconfig',
         'packages/ui',
       ],

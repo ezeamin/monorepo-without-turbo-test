@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
+
 import { IconContext } from 'react-icons';
 
 import type { IconPropsType } from './Icon.types';
@@ -16,20 +17,21 @@ import type { IconPropsType } from './Icon.types';
  * @returns JSX.Element The rendered Icon component.
  *
  * @example
- * ```
  * - Standalone usage:
+ * ```
  * <Icon iconComponent={SomeIcon} color="#FF0000" size="2em" />
+ * ```
  * In this example, the `color` and `size` props will be applied to the icon.
  *
  * @example
  * - Usage within another component:
+ * ```
  * <Button>
  *   <Icon iconComponent={AnotherIcon} />
  * </Button>
+ * ```
  *
  *  In this example, the `color` and `size` props will be inherited from the parent `Button` component.
- *
- * ```
  *
  * @remarks It is recommended to provide a `title` attribute for accessibility purposes.
  * If a `title` is not provided, a default `title` attribute will be generated based on the icon component's name.

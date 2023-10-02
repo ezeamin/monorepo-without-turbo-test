@@ -11,14 +11,14 @@
     "prettier:check": "npx prettier -c .",
     "prettier:write": "npx prettier -w .",
     "prepare": "pnpm i tsx -g && tsx ./packages/config/prepare-project.ts",
-    "remove:modules": "npx npkill .",
+    "remove:modules": "npx npkill .",
     "update:all": "ncu -u"
   },
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
-  "packageManager": "pnpm@8.6.10",
+  "packageManager": "pnpm@8.8.10",
   "name": "puas-monorepo",
   "dependencies": {
     "@commitlint/cli": "^17.7.2",

@@ -1,6 +1,6 @@
-import 'global-styles/global.css';
+import Button from '@/components/Button/Button';
 
-import Button from './src/components/Base/Button/Button';
+import 'global-styles/global.css';
 
 // component exports
 export { Button };

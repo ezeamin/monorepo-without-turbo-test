@@ -1,11 +1,10 @@
 {
-  "name": "ui",
+  "name": "puas-components",
   "version": "0.0.1",
   "main": "./index.tsx",
   "types": "./index.tsx",
   "license": "MIT",
   "scripts": {
-    "generate:component": "turbo gen react-component",
     "lint": "npx tsx ../config/pre-build.ts --ignore-build --fix",
     "prettier:check": "npx prettier -c .",
     "prettier:write": "npx prettier -w ."
@@ -18,14 +17,11 @@
     "eslint-config-custom": "workspace:*",
     "react": "^18.2.0",
     "tsconfig": "workspace:*",
-    "typescript": "^5.2.2",
-    "prettier-config-custom": "workspace:*"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "global-styles": "workspace:*",
-    "react-icons": "^4.11.0",
-    "utilities": "workspace:*"
-  },
-  "prettier": "prettier-config-custom"
+    "react-icons": "^4.11.0"
+  }
 }

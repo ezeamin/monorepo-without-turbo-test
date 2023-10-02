@@ -1,14 +1,17 @@
 'use client';
 
 import { Fragment, useEffect, useState } from 'react';
-import { MdCheck, MdClear, MdExpandMore } from 'react-icons/md';
+
+import Button from '@/components/Button/Button';
+import Icon from '@/components/Icon/Icon';
+
+import { cn } from 'utilities';
+
+import { DTI, DTI_LIST } from '@/dti/dti';
 
 import { Combobox, Transition } from '@headlessui/react';
+import { MdCheck, MdClear, MdExpandMore } from 'react-icons/md';
 
-import { DTI, DTI_LIST } from '../../../dti/dti';
-import { cn } from '../../../helpers/cn';
-import Icon from '../../Utils/Icon/Icon';
-import Button from '../Button/Button';
 import type { ComboBoxPropsType } from './ComboBox.types';
 
 /**

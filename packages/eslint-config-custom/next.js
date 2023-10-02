@@ -13,13 +13,16 @@ const project = resolve(process.cwd(), 'tsconfig.json');
 
 module.exports = {
   extends: [
-    '@vercel/style-guide/eslint/node',
-    '@vercel/style-guide/eslint/typescript',
-    '@vercel/style-guide/eslint/browser',
-    '@vercel/style-guide/eslint/react',
-    '@vercel/style-guide/eslint/next',
+    ...[
+      '@vercel/style-guide/eslint/node',
+      '@vercel/style-guide/eslint/typescript',
+      '@vercel/style-guide/eslint/browser',
+      '@vercel/style-guide/eslint/react',
+      '@vercel/style-guide/eslint/next',
+    ].map(require.resolve),
     'eslint-config-turbo',
-  ].map(require.resolve),
+    'next/core-web-vitals',
+  ],
   parserOptions: {
     project,
   },
@@ -28,7 +31,7 @@ module.exports = {
     JSX: true,
   },
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       typescript: {
         project,
       },
@@ -39,13 +42,12 @@ module.exports = {
   rules: {
     'import/no-default-export': 'off',
 
-    'import/no-extraneous-dependencies': [
+    // Defines how React function components should be written.
+    'react/function-component-definition': [
       'error',
       {
-        devDependencies: false,
-        optionalDependencies: false,
-        peerDependencies: false,
-        packageDir: './', // Ruta al directorio del proyecto actual
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
       },
     ],
 

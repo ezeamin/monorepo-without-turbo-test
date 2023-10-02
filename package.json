@@ -25,13 +25,10 @@
     "@commitlint/config-angular": "^17.7.0",
     "@manypkg/cli": "latest",
     "@types/node": "^20.7.1",
-
     "husky": "^8.0.3",
     "npm-check-updates": "^16.14.4",
-
     "prettier": "^3.0.3",
     "tailwind-merge": "^1.14.0",
-
     "tsconfig": "workspace:*",
     "turbo": "latest",
     "typescript": "^5.2.2"

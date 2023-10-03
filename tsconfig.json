@@ -1,9 +1,3 @@
 {
   "extends": "tsconfig/base.json",
-  "compilerOptions": {
-    "paths": {
-      "@ui/*": ["./packages/ui/src/*"],
-      "@puas/*": ["./packages/puas-components/src/*"]
-    }
-  }
 }

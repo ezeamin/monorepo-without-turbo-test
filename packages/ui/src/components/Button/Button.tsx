@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from 'react';
 
-import Icon from '@ui/components/Icon/Icon';
-
 import { cn, removeLineBreaks } from 'utilities';
+
+import Icon from '../Icon/Icon';
 
 import './Button.styles.css';
 import '@/styles/styles.css';

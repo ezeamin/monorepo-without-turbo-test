@@ -2,13 +2,13 @@
 
 import { Fragment, useEffect, useState } from 'react';
 
-import Button from '@ui/components/Button/Button';
-import Icon from '@ui/components/Icon/Icon';
-
 import { cn } from 'utilities';
 
 import { DTI, DTI_LIST } from 'dti';
 
+// Imports wont order correctly if we use the relative import
+import Button from '../Button/Button';
+import Icon from '../Icon/Icon';
 import { Combobox, Transition } from '@headlessui/react';
 import { MdCheck, MdClear, MdExpandMore } from 'react-icons/md';
 

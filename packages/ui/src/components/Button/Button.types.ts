@@ -1,10 +1,10 @@
-import type { IconPropsType } from '../Icon/Icon.types';
-import type { DataTestId } from '@ui/types';
+import type { DataTestId } from '../../types';
 import type {
   ColorIntensityType,
   ColorNameType,
   TextColorType,
-} from '@ui/types/tailwind';
+} from '../../types/tailwind';
+import type { IconPropsType } from '../Icon/Icon.types';
 
 interface ButtonColorType {
   light:

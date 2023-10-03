@@ -1,4 +1,4 @@
-import Header from '@puas/components/Header';
+import Header from './src/components/Header';
 
 // component exports
 export { Header };

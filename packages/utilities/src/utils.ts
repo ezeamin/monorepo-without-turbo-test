@@ -8,7 +8,7 @@ export const removeLineBreaks = (
   strings: TemplateStringsArray,
   ...values: unknown[]
 ): string => {
-  let result = '';
+  let result = "";
 
   for (let i = 0; i < strings.length; i += 1) {
     result += strings[i];
@@ -18,7 +18,7 @@ export const removeLineBreaks = (
   }
 
   // Remove line breaks and extra spaces
-  result = result.replace(/\s+/g, ' ');
+  result = result.replace(/\s+/g, " ");
 
   return result;
 };

@@ -40,5 +40,17 @@ module.exports = {
 
     // Disables the rule that prohibits parameter reassignment.
     'no-param-reassign': 'error',
+
+    // Disables the rule that prohibits "kebab-case" in file names.
+    'unicorn/filename-case': [
+      'error',
+      {
+        cases: {
+          camelCase: true, // Allows camelCase file names (initial letter in lowercase)
+          pascalCase: true, // Allows PascalCase file names (initial letter in uppercase)
+          kebabCase: false, // Disables kebab-case
+        },
+      },
+    ],
   },
 };

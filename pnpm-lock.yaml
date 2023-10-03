@@ -103,6 +103,18 @@ importers:
         specifier: ^1.3.0
         version: 1.3.0
 
+  packages/dti:
+    devDependencies:
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../eslint-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+
   packages/eslint-config-custom:
     devDependencies:
       '@next/eslint-plugin-next':
@@ -135,6 +147,25 @@ importers:
 
   packages/global-styles: {}
 
+  packages/hooks:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.23
+        version: 18.2.24
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../eslint-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+
   packages/prettier-config-custom: {}
 
   packages/puas-components:
@@ -142,12 +173,33 @@ importers:
       '@headlessui/react':
         specifier: ^1.7.17
         version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
+      dti:
+        specifier: workspace:*
+        version: link:../dti
       global-styles:
         specifier: workspace:*
         version: link:../global-styles
+      hooks:
+        specifier: workspace:*
+        version: link:../hooks
+      next:
+        specifier: ^13.5.3
+        version: 13.5.3(react-dom@18.2.0)(react@18.2.0)
+      next-themes:
+        specifier: ^0.2.1
+        version: 0.2.1(next@13.5.3)(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
       react-icons:
         specifier: ^4.11.0
         version: 4.11.0(react@18.2.0)
+      ui:
+        specifier: workspace:*
+        version: link:../ui
+      utilities:
+        specifier: workspace:*
+        version: link:../utilities
     devDependencies:
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^4.2.0
@@ -164,9 +216,9 @@ importers:
       eslint-config-custom:
         specifier: workspace:*
         version: link:../eslint-config-custom
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
+      prettier-config-custom:
+        specifier: workspace:*
+        version: link:../prettier-config-custom
       tsconfig:
         specifier: workspace:*
         version: link:../tsconfig
@@ -196,6 +248,9 @@ importers:
       '@headlessui/react':
         specifier: ^1.7.17
         version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
+      dti:
+        specifier: workspace:*
+        version: link:../dti
       global-styles:
         specifier: workspace:*
         version: link:../global-styles
@@ -236,9 +291,6 @@ importers:
 
   packages/utilities:
     devDependencies:
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: ^4.2.0
-        version: 4.2.0(prettier@3.0.3)
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
@@ -4553,6 +4605,18 @@ packages:
   /negotiator@0.6.3:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
     engines: {node: '>= 0.6'}
+    dev: false
+
+  /next-themes@0.2.1(next@13.5.3)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 13.5.3(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /next@13.5.3(react-dom@18.2.0)(react@18.2.0):

@@ -4,7 +4,7 @@ const Home = (): JSX.Element => {
   return (
     <main className="bg-slate-200">
       <Button
-        colorDark="bg-slate-700"
+        colorDark="dark:bg-slate-700"
         colorLight="bg-gray-100"
         dti="example"
         textColorLight="text-blue-700"

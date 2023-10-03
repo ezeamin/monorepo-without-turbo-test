@@ -1,10 +1,9 @@
-import type { DataTestId } from '@/types';
+import type { DataTestId } from '../../types';
 import type {
   ColorIntensityType,
   ColorNameType,
   TextColorType,
-} from '@/types/tailwind';
-
+} from '../../types/tailwind';
 import type { IconPropsType } from '../Icon/Icon.types';
 
 interface ButtonColorType {
@@ -21,17 +20,17 @@ interface ButtonColorType {
     | 'btn-error'
     | `bg-${ColorNameType}-${ColorIntensityType}`;
   dark:
-    | 'btn-neutral'
-    | 'btn-primary'
-    | 'btn-secondary'
-    | 'btn-accent'
-    | 'btn-ghost'
-    | 'btn-link'
-    | 'btn-info'
-    | 'btn-success'
-    | 'btn-warning'
-    | 'btn-error'
-    | `bg-${ColorNameType}-${ColorIntensityType}`;
+    | 'dark:btn-neutral'
+    | 'dark:btn-primary'
+    | 'dark:btn-secondary'
+    | 'dark:btn-accent'
+    | 'dark:btn-ghost'
+    | 'dark:btn-link'
+    | 'dark:btn-info'
+    | 'dark:btn-success'
+    | 'dark:btn-warning'
+    | 'dark:btn-error'
+    | `dark:bg-${ColorNameType}-${ColorIntensityType}`;
 }
 
 export type ButtonPropsType = React.ButtonHTMLAttributes<HTMLButtonElement> &

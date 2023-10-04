@@ -12,8 +12,6 @@
     "prettier:write": "npx prettier -w .",
     "prepare": "pnpm i tsx -g && tsx ./packages/config/prepare-project.ts",
     "remove:modules": "npx npkill .",
-    "syncpack:check": "pnpm syncpack list-mismatches",
-    "syncpack:fix": "pnpm syncpack fix-mismatches",
     "update:all": "ncu -u"
   },
   "workspaces": [
@@ -34,8 +32,5 @@
     "tsconfig": "workspace:*",
     "turbo": "latest",
     "typescript": "^5.2.2"
-  },
-  "devDependencies": {
-    "syncpack": "^11.2.1"
   }
 }

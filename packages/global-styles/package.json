@@ -1,7 +1,7 @@
 {
-    "name": "global-styles",
-    "version": "0.0.0",
-    "files": [
-        "global.css"
-    ]
+  "name": "global-styles",
+  "version": "0.0.0",
+  "files": [
+    "global.css"
+  ]
 }

@@ -9,26 +9,33 @@ const runPrepareScript = () => {
     process.stdout.write('\x1b[33m🔧 Running prepare script...\x1b[0m\n\n');
 
     // Run husky install
-    process.stdout.write('⌛ (1/3) Installing Husky...');
+    process.stdout.write('⌛ (1/4) Installing Husky...');
     execSync('husky install');
     readline.clearLine(process.stdout, 0);
     readline.cursorTo(process.stdout, 0);
-    process.stdout.write('✅ (1/3) Installed Husky\n');
+    process.stdout.write('✅ (1/4) Installed Husky\n');
 
     // Install global dependencies
-    process.stdout.write('⌛ (2/3) Installing global dependencies...');
+    process.stdout.write('⌛ (2/4) Installing global dependencies...');
     execSync(
       'pnpm install npm-check-updates typescript prettier eslint @trivago/prettier-plugin-sort-imports -g --silent'
     );
     readline.clearLine(process.stdout, 0);
     readline.cursorTo(process.stdout, 0);
-    process.stdout.write('✅ (2/3) Installed global dependencies\n');
+    process.stdout.write('✅ (2/4) Installed global dependencies\n');
 
     // Check for dependency updates
-    process.stdout.write('⌛ (3/3) Checking for dependency updates...');
+    process.stdout.write('⌛ (3/4) Checking for dependency updates...');
     const updates = execSync('ncu');
     console.log(`\n${updates}`);
-    process.stdout.write('✅ (3/3) Checked for dependency updates\n');
+    process.stdout.write('✅ (3/4) Checked for dependency updates\n');
+
+    // check the versions of the dependencies
+    // process.stdout.write('⌛ (4/4) Checking for dependency versions...');
+    // execSync('pnpm syncpack list-mismatches');
+    // readline.clearLine(process.stdout, 0);
+    // readline.cursorTo(process.stdout, 0);
+    // process.stdout.write('✅ (4/4) Checked for dependency versions\n');
 
     // Delay 1s before printing success message
     setTimeout(() => {
@@ -53,6 +60,8 @@ const runPrepareScript = () => {
       console.log(
         '\x1b[33m❗ To only update one (or more) of them, run \x1b[0mncu [dependency_name(s)] -u\n'
       );
+
+      // console.log()
     }, 1000);
   } catch (e: unknown) {
     const error = e as Error;

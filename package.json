@@ -50,7 +50,9 @@
         "dependencies": [
           "**"
         ],
-        "dependencyTypes": ["!local"]
+        "dependencyTypes": [
+          "!local"
+        ]
       }
     ],
     "source": [

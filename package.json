@@ -11,7 +11,7 @@
     "prepare": "pnpm i tsx -g && tsx ./packages/config/prepare-project.ts",
     "remove:modules": "npx npkill .",
     "syncpack:check": "npx syncpack list-mismatches",
-    "syncpack:fix": "npx syncpack fix-mismatches",
+    "syncpack:fix": "npx syncpack fix-mismatches ; pnpm i",
     "syncpack:list": "npx syncpack list",
     "update:all": "ncu -u"
   },

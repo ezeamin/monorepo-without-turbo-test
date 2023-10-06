@@ -11,8 +11,14 @@
     "prepare": "pnpm i tsx -g && tsx ./packages/config/prepare-project.ts",
     "remove:modules": "npx npkill .",
     "syncpack:check": "npx syncpack list-mismatches",
-    "syncpack:fix": "npx syncpack fix-mismatches",
+    "syncpack:fix": "npx syncpack fix-mismatches ; pnpm i",
+    "syncpack:list": "npx syncpack list",
     "update:all": "ncu -u"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": "please-use-pnpm",
+    "npm": "please-use-pnpm"
   },
   "workspaces": [
     "apps/*",
@@ -34,5 +40,25 @@
   },
   "devDependencies": {
     "syncpack": "^11.2.1"
+  },
+  "syncpack": {
+    "versionGroups": [
+      {
+        "packages": [
+          "**"
+        ],
+        "dependencies": [
+          "**"
+        ],
+        "dependencyTypes": [
+          "!local"
+        ]
+      }
+    ],
+    "source": [
+      "apps/*/package.json",
+      "package.json",
+      "packages/*/package.json"
+    ]
   }
 }

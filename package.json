@@ -40,25 +40,5 @@
   },
   "devDependencies": {
     "syncpack": "^11.2.1"
-  },
-  "syncpack": {
-    "versionGroups": [
-      {
-        "packages": [
-          "**"
-        ],
-        "dependencies": [
-          "**"
-        ],
-        "dependencyTypes": [
-          "!local"
-        ]
-      }
-    ],
-    "source": [
-      "apps/*/package.json",
-      "package.json",
-      "packages/*/package.json"
-    ]
   }
 }

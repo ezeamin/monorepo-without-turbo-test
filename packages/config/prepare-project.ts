@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import gradient from 'gradient-string';
 import { execSync } from 'node:child_process';
+import path from 'node:path';
 import * as readline from 'readline';
 
 const runPrepareScript = () => {
@@ -18,7 +19,7 @@ const runPrepareScript = () => {
     // Install global dependencies
     process.stdout.write('⌛ (2/4) Installing global dependencies...');
     execSync(
-      'pnpm install npm-check-updates typescript prettier eslint @trivago/prettier-plugin-sort-imports -g --silent'
+      'pnpm install npm-check-updates typescript prettier eslint @trivago/prettier-plugin-sort-imports syncpack -g --silent'
     );
     readline.clearLine(process.stdout, 0);
     readline.cursorTo(process.stdout, 0);
@@ -30,12 +31,31 @@ const runPrepareScript = () => {
     console.log(`\n${updates}`);
     process.stdout.write('✅ (3/4) Checked for dependency updates\n');
 
-    // check the versions of the dependencies
+
+
+
+
+    // // check the versions of the dependencies
     // process.stdout.write('⌛ (4/4) Checking for dependency versions...');
-    // execSync('pnpm syncpack list-mismatches');
-    // readline.clearLine(process.stdout, 0);
-    // readline.cursorTo(process.stdout, 0);
+
+    // // Obtén la ruta absoluta al directorio raíz
+    // const rootDir = path.resolve(__dirname);
+    // console.log("🥤 ~ file: prepare-project.ts:39 ~ runPrepareScript ~ rootDir:", rootDir)
+
+    // // Ejecuta el comando syncpack list-mismatches en el directorio raíz
+    // const output = execSync('npx syncpack list-mismatches', { cwd: '..' });
+    // console.log("😎 ~ file: prepare-project.ts:44 ~ runPrepareScript ~ output:", output.toString())
+
+    // const outputString = output.toString();
+
+    // console.log('Salida de syncpack list-mismatches:\n', outputString);
+  
+    // // readline.clearLine(process.stdout, 0);
+    // // readline.cursorTo(process.stdout, 0);
     // process.stdout.write('✅ (4/4) Checked for dependency versions\n');
+
+
+
 
     // Delay 1s before printing success message
     setTimeout(() => {

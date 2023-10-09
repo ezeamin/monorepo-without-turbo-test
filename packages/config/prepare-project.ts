@@ -1,10 +1,10 @@
-/* eslint-disable no-console */
 import gradient from 'gradient-string';
 import { execSync } from 'node:child_process';
 import path from 'node:path';
+
 import * as readline from 'readline';
 
-const runPrepareScript = () => {
+const runPrepareScript = async () => {
   try {
     console.clear();
     process.stdout.write('\x1b[33m🔧 Running prepare script...\x1b[0m\n\n');
@@ -29,33 +29,55 @@ const runPrepareScript = () => {
     process.stdout.write('⌛ (3/4) Checking for dependency updates...');
     const updates = execSync('ncu');
     console.log(`\n${updates}`);
-    process.stdout.write('✅ (3/4) Checked for dependency updates\n');
+    process.stdout.write('✅ (3/4) Checked for dependency updates...\n');
 
+    // Check the versions of the dependencies
+    process.stdout.write('⌛ (4/4) Checking for dependency versions...');
 
+    const projectDirectory = path.resolve(__dirname, '../..');
 
+    try {
+      execSync(`pnpm run syncpack:check`, {
+        cwd: projectDirectory,
+        stdio: 'inherit',
+      });
+      console.log('✅ (4/4) Checked for dependency versions');
+    } catch (error) {
+      if (
+        typeof error === 'object' &&
+        error !== null &&
+        'status' in error &&
+        error.status === 1
+      ) {
+        console.log('\n\x1b[31m❗ Inconsistency found in dependencies.');
+        console.log('❗ Do you want to run: pnpm run syncpack:fix?');
+        console.log('\x1b[33m⚠️  Press (y/n) to execute the script! \x1b[0m');
+        console.log(
+          "If you don't press any key, the execution will not continue."
+        );
 
+        const rl = readline.createInterface({
+          input: process.stdin,
+          output: process.stdout,
+        });
 
-    // // check the versions of the dependencies
-    // process.stdout.write('⌛ (4/4) Checking for dependency versions...');
+        const answer = await new Promise((resolve) => {
+          rl.question('', (input) => {
+            resolve(input.toLowerCase());
+            rl.close();
+          });
+        });
 
-    // // Obtén la ruta absoluta al directorio raíz
-    // const rootDir = path.resolve(__dirname);
-    // console.log("🥤 ~ file: prepare-project.ts:39 ~ runPrepareScript ~ rootDir:", rootDir)
-
-    // // Ejecuta el comando syncpack list-mismatches en el directorio raíz
-    // const output = execSync('npx syncpack list-mismatches', { cwd: '..' });
-    // console.log("😎 ~ file: prepare-project.ts:44 ~ runPrepareScript ~ output:", output.toString())
-
-    // const outputString = output.toString();
-
-    // console.log('Salida de syncpack list-mismatches:\n', outputString);
-  
-    // // readline.clearLine(process.stdout, 0);
-    // // readline.cursorTo(process.stdout, 0);
-    // process.stdout.write('✅ (4/4) Checked for dependency versions\n');
-
-
-
+        if (answer === 'y') {
+          console.log('\nRunning pnpm run syncpack:fix...');
+          execSync('pnpm run syncpack:fix', { stdio: 'inherit' });
+        } else {
+          throw error;
+        }
+      } else {
+        throw error;
+      }
+    }
 
     // Delay 1s before printing success message
     setTimeout(() => {
@@ -80,8 +102,6 @@ const runPrepareScript = () => {
       console.log(
         '\x1b[33m❗ To only update one (or more) of them, run \x1b[0mncu [dependency_name(s)] -u\n'
       );
-
-      // console.log()
     }, 1000);
   } catch (e: unknown) {
     const error = e as Error;

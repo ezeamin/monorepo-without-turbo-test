@@ -18,6 +18,7 @@ interface ButtonColorType {
     | 'btn-success'
     | 'btn-warning'
     | 'btn-error'
+    | 'bg-transparent'
     | `bg-${ColorNameType}-${ColorIntensityType}`;
   dark:
     | 'dark:btn-neutral'
@@ -30,6 +31,7 @@ interface ButtonColorType {
     | 'dark:btn-success'
     | 'dark:btn-warning'
     | 'dark:btn-error'
+    | 'dark:bg-transparent'
     | `dark:bg-${ColorNameType}-${ColorIntensityType}`;
 }
 

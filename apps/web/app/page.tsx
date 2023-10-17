@@ -1,4 +1,5 @@
-import { Button } from 'ui';
+import { Button, IconButton } from 'ui';
+import { MdFirstPage, MdLastPage } from 'react-icons/md';
 
 const Home = (): JSX.Element => {
   return (
@@ -16,6 +17,22 @@ const Home = (): JSX.Element => {
       <hr />
 
       <h1 className="text-blue-400">chau</h1>
+
+      <hr />
+
+      <IconButton
+        className='hover:bg-slate-500'
+        colorDark='dark:bg-slate-700'
+        colorLight='bg-slate-600'
+        dti='colored-icon'
+        iconComponent={<MdFirstPage color="#fff"/>}
+        label="prueba"
+      />
+
+      <IconButton
+        dti='outlined-icon'
+        iconComponent={<MdLastPage color="#fff"/>}
+      />
     </main>
   );
 };

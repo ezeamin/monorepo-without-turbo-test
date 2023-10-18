@@ -2,7 +2,7 @@
 
 import { DTI, DTI_LIST } from 'dti';
 
-import Button from '../Button/Button';
+import IconButton from '../IconButton/IconButton';
 import {
   MdChevronLeft,
   MdChevronRight,
@@ -19,95 +19,84 @@ import type { PaginationPropsType } from './Pagination.types';
  * @param count - Number of elements.
  * @param page - Current page.
  * @param rowsPerPage - Number of displayed elements.
- +
+ * @param onPageChange - Function to execute on click
  * @returns JSX.Element A custom combo box element.
  */
 
 const Pagination = (props: PaginationPropsType): JSX.Element => {
-  const { count = 0, page = 0, rowsPerPage = 10 } = props;
+  const { 
+    count = 0, 
+    onPageChange,
+    page = 0, 
+    rowsPerPage = 10
+  } = props;
 
   // Functions
   const handleFirstPageButtonClick = (
-    _event: React.MouseEvent<HTMLButtonElement>
+    event: React.MouseEvent<HTMLButtonElement>
   ): void => {
-    // console.log(event, 0);
+    onPageChange(event, 0);
   };
   const handleBackButtonClick = (
-    _event: React.MouseEvent<HTMLButtonElement>
+    event: React.MouseEvent<HTMLButtonElement>
   ): void => {
-    // console.log(event, page - 1);
+    onPageChange(event, page-1);
   };
   const handleNextButtonClick = (
-    _event: React.MouseEvent<HTMLButtonElement>
+    event: React.MouseEvent<HTMLButtonElement>
   ): void => {
-    // console.log(event, page + 1);
+    onPageChange(event, page+1);
   };
   const handleLastPageButtonClick = (
-    _event: React.MouseEvent<HTMLButtonElement>
+    event: React.MouseEvent<HTMLButtonElement>
   ): void => {
-    // console.log(event, Math.max(0, Math.ceil(count / rowsPerPage) - 1));
+    onPageChange(event, Math.max(0, Math.ceil(count / rowsPerPage) - 1));
   };
 
   // TODO: revisar hover modo oscuro
 
   return (
     <div className="flow-root w-full">
-      <Button
-        aria-label="Primera Página"
-        className="float-left m-2"
-        colorDark="dark:bg-transparent"
-        colorLight="bg-transparent"
+      <IconButton
+        className="float-left hover:bg-slate-500 m-2"
+        colorDark='dark:bg-slate-700'
+        colorLight='bg-slate-600'
         disabled={page === 0}
         dti={DTI(DTI_LIST.BUTTON('first'))}
+        iconComponent={<MdFirstPage color="#fff" />}
+        label="Primera Página"
         onClick={handleFirstPageButtonClick}
-        outlineButton
-        textColorDark="dark:text-white"
-        textColorLight="text-black"
-      >
-        <MdFirstPage />
-      </Button>
-      <Button
-        aria-label="Página Anterior"
-        className="float-left m-2"
-        colorDark="dark:bg-transparent"
-        colorLight="bg-transparent"
+      />
+      <IconButton
+        className="float-left hover:bg-slate-500 m-2"
+        colorDark='dark:bg-slate-700'
+        colorLight='bg-slate-600'
         disabled={page === 0}
         dti={DTI(DTI_LIST.BUTTON('prev'))}
+        iconComponent={<MdChevronLeft color="#fff" />}
+        label="Página Anterior"
         onClick={handleBackButtonClick}
-        outlineButton
-        textColorDark="dark:text-white"
-        textColorLight="text-black"
-      >
-        <MdChevronLeft />
-      </Button>
-      <Button
-        aria-label="Última Página"
-        className="float-right m-2"
-        colorDark="dark:bg-transparent"
-        colorLight="bg-transparent"
+      />
+      <IconButton
+        className="float-right hover:bg-slate-500 m-2"
+        colorDark='dark:bg-slate-700'
+        colorLight='bg-slate-600'
         disabled={page >= Math.ceil(count / rowsPerPage) - 1}
         dti={DTI(DTI_LIST.BUTTON('last'))}
+        iconComponent={<MdLastPage color="#fff" />}
+        label="Última Página"
         onClick={handleLastPageButtonClick}
-        outlineButton
-        textColorDark="dark:text-white"
-        textColorLight="text-black"
-      >
-        <MdLastPage />
-      </Button>
-      <Button
-        aria-label="Próxima Página"
-        className="float-right m-2"
-        colorDark="dark:bg-transparent"
-        colorLight="bg-transparent"
+      />
+      <IconButton
+        className="float-right hover:bg-slate-500 m-2"
+        colorDark='dark:bg-slate-700'
+        colorLight='bg-slate-600'
         disabled={page >= Math.ceil(count / rowsPerPage) - 1}
         dti={DTI(DTI_LIST.BUTTON('next'))}
+        iconComponent={<MdChevronRight color="#fff" />}
+        label="Próxima Página"
         onClick={handleNextButtonClick}
-        outlineButton
-        textColorDark="dark:text-white"
-        textColorLight="text-black"
-      >
-        <MdChevronRight />
-      </Button>
+      />
     </div>
   );
 };

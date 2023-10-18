@@ -62,8 +62,8 @@ const IconButton = (props: IconButtonPropsType): JSX.Element => {
       aria-label={label}
       className={cn(
         removeLineBreaks`
-      ${colorLight} 
-      ${colorDark}
+      ${disabled ? '' : colorLight} 
+      ${disabled ? '' : colorDark}
       animated
       bordered
       p-2

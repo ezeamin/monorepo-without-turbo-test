@@ -5,4 +5,8 @@ import Pagination from './src/components/Pagination/Pagination';
 import 'global-styles/global.css';
 
 // component exports
-export { Button, IconButton, Pagination };
+export { 
+    Button, 
+    IconButton, 
+    Pagination 
+};

@@ -24,12 +24,7 @@ import type { PaginationPropsType } from './Pagination.types';
  */
 
 const Pagination = (props: PaginationPropsType): JSX.Element => {
-  const { 
-    count = 0, 
-    onPageChange,
-    page = 0, 
-    rowsPerPage = 10
-  } = props;
+  const { count = 0, onPageChange, page = 0, rowsPerPage = 10 } = props;
 
   // Functions
   const handleFirstPageButtonClick = (
@@ -40,12 +35,12 @@ const Pagination = (props: PaginationPropsType): JSX.Element => {
   const handleBackButtonClick = (
     event: React.MouseEvent<HTMLButtonElement>
   ): void => {
-    onPageChange(event, page-1);
+    onPageChange(event, page - 1);
   };
   const handleNextButtonClick = (
     event: React.MouseEvent<HTMLButtonElement>
   ): void => {
-    onPageChange(event, page+1);
+    onPageChange(event, page + 1);
   };
   const handleLastPageButtonClick = (
     event: React.MouseEvent<HTMLButtonElement>
@@ -59,8 +54,8 @@ const Pagination = (props: PaginationPropsType): JSX.Element => {
     <div className="flow-root w-full">
       <IconButton
         className="float-left hover:bg-slate-500 m-2"
-        colorDark='dark:bg-slate-700'
-        colorLight='bg-slate-600'
+        colorDark="dark:bg-slate-700"
+        colorLight="bg-slate-600"
         disabled={page === 0}
         dti={DTI(DTI_LIST.BUTTON('first'))}
         iconComponent={<MdFirstPage color="#fff" />}
@@ -69,8 +64,8 @@ const Pagination = (props: PaginationPropsType): JSX.Element => {
       />
       <IconButton
         className="float-left hover:bg-slate-500 m-2"
-        colorDark='dark:bg-slate-700'
-        colorLight='bg-slate-600'
+        colorDark="dark:bg-slate-700"
+        colorLight="bg-slate-600"
         disabled={page === 0}
         dti={DTI(DTI_LIST.BUTTON('prev'))}
         iconComponent={<MdChevronLeft color="#fff" />}
@@ -79,8 +74,8 @@ const Pagination = (props: PaginationPropsType): JSX.Element => {
       />
       <IconButton
         className="float-right hover:bg-slate-500 m-2"
-        colorDark='dark:bg-slate-700'
-        colorLight='bg-slate-600'
+        colorDark="dark:bg-slate-700"
+        colorLight="bg-slate-600"
         disabled={page >= Math.ceil(count / rowsPerPage) - 1}
         dti={DTI(DTI_LIST.BUTTON('last'))}
         iconComponent={<MdLastPage color="#fff" />}
@@ -89,8 +84,8 @@ const Pagination = (props: PaginationPropsType): JSX.Element => {
       />
       <IconButton
         className="float-right hover:bg-slate-500 m-2"
-        colorDark='dark:bg-slate-700'
-        colorLight='bg-slate-600'
+        colorDark="dark:bg-slate-700"
+        colorLight="bg-slate-600"
         disabled={page >= Math.ceil(count / rowsPerPage) - 1}
         dti={DTI(DTI_LIST.BUTTON('next'))}
         iconComponent={<MdChevronRight color="#fff" />}

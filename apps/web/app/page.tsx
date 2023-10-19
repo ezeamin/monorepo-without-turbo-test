@@ -1,3 +1,5 @@
+
+import { MdAddToDrive } from "react-icons/md";
 import { Button } from 'ui';
 
 const Home = (): JSX.Element => {
@@ -14,6 +16,9 @@ const Home = (): JSX.Element => {
       </Button>
 
       <hr />
+
+      <h2>Prueba icono</h2>
+      <MdAddToDrive />
 
       <h1 className="text-blue-400">chau</h1>
     </main>

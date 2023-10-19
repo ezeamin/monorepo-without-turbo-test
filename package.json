@@ -33,6 +33,7 @@
     "husky": "^8.0.3",
     "npm-check-updates": "^16.14.4",
     "prettier": "^3.0.3",
+    "react-icons": "^4.11.0",
     "syncpack": "^11.2.1",
     "tailwind-merge": "^1.14.0",
     "tsconfig": "workspace:*",

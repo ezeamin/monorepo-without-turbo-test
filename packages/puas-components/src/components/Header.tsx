@@ -8,6 +8,7 @@ import { usePortrait } from 'hooks';
 
 import { DTI, DTI_LIST } from 'dti';
 
+import ThemeProvider from '../providers/ThemeProvider';
 // import Skeleton from 'ui/Skeleton';
 import PortraitMenu from './PortraitMenu';
 import ProfileAvatar from './ProfileAvatar';
@@ -115,7 +116,9 @@ const Header = (): JSX.Element => {
         </Button>
       </nav>
       <div className="flex gap-4">
-        <ThemeTogglerButton />
+        <ThemeProvider>
+          <ThemeTogglerButton />
+        </ThemeProvider>
         <ProfileAvatar />
       </div>
     </header>

@@ -1,3 +1,5 @@
+import { Header } from 'puas-components';
+
 import 'global-styles/global.css';
 
 const RootLayout = ({
@@ -6,8 +8,11 @@ const RootLayout = ({
   children: React.ReactNode;
 }): JSX.Element => {
   return (
-    <html lang="es">
-      <body>{children}</body>
+    <html lang='es' suppressHydrationWarning>
+      <body>
+          <Header />
+          {children}
+      </body>
     </html>
   );
 };

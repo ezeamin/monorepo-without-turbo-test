@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import { Button } from 'ui';
-// import { Checkbox } from 'ui'
-=======
 import { Button, IconButton } from 'ui';
 import { MdAddToDrive, MdFirstPage, MdLastPage } from 'react-icons/md';
->>>>>>> 154f1d29a9eddbc9887c05f7faf81c1e495cb4fc
 
 const Home = (): JSX.Element => {
   return (

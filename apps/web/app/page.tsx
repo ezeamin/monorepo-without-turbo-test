@@ -1,4 +1,5 @@
 import { Button } from 'ui';
+// import { Checkbox } from 'ui'
 
 const Home = (): JSX.Element => {
   return (
@@ -12,8 +13,8 @@ const Home = (): JSX.Element => {
       >
         BUTTON COMPONENT
       </Button>
-
       <hr />
+      {/* <Checkbox/> */}
 
       <h1 className="text-blue-400">chau</h1>
     </main>

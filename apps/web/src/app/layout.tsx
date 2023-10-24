@@ -1,6 +1,14 @@
-import { Header } from 'puas-components';
+import {
+  Header,
+  LandscapeMenu,
+  SkipNavButton,
+  SonnerToast,
+} from 'puas-components';
 
 import 'global-styles/global.css';
+
+// !TEMP
+const isLoggedIn = true;
 
 const RootLayout = ({
   children,
@@ -10,8 +18,12 @@ const RootLayout = ({
   return (
     <html lang='es' suppressHydrationWarning>
       <body>
-          <Header />
-          {children}
+        <SkipNavButton />
+        <LandscapeMenu isLoggedIn={isLoggedIn}>
+          {isLoggedIn && <Header />}
+          <main id='main'>{children}</main>
+          <SonnerToast />
+        </LandscapeMenu>
       </body>
     </html>
   );

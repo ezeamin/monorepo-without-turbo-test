@@ -1,10 +1,10 @@
-import { Button, IconButton } from 'ui';
-import { MdAddToDrive, MdFirstPage, MdLastPage } from 'react-icons/md';
+// import { Button, IconButton } from 'ui';
+// import { MdAddToDrive, MdFirstPage, MdLastPage } from 'react-icons/md';
 
 const Home = (): JSX.Element => {
   return (
-    <main className='bg-slate-200'>
-      <Button
+    <>
+      {/* <Button
         colorDark='dark:bg-slate-700'
         colorLight='bg-gray-100'
         dti='example'
@@ -35,8 +35,8 @@ const Home = (): JSX.Element => {
       <IconButton
         dti='outlined-icon'
         iconComponent={<MdLastPage color='#fff' />}
-      />
-    </main>
+      /> */}
+    </>
   );
 };
 

@@ -65,9 +65,4 @@ const PortraitMenu = (): JSX.Element => {
   );
 };
 
-// export default PortraitMenu;
-
-// const PortraitMenu = (): JSX.Element => {
-//   return <div />;
-// };
 export default PortraitMenu;

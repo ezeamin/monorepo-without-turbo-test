@@ -47,9 +47,6 @@ importers:
 
   apps/web:
     dependencies:
-      global-styles:
-        specifier: workspace:*
-        version: link:../../packages/global-styles
       images:
         specifier: workspace:*
         version: link:../../packages/images
@@ -163,8 +160,6 @@ importers:
         specifier: ^48.0.1
         version: 48.0.1(eslint@8.49.0)
 
-  packages/global-styles: {}
-
   packages/hooks:
     dependencies:
       react:
@@ -196,9 +191,6 @@ importers:
       dti:
         specifier: workspace:*
         version: link:../dti
-      global-styles:
-        specifier: workspace:*
-        version: link:../global-styles
       hooks:
         specifier: workspace:*
         version: link:../hooks
@@ -280,9 +272,6 @@ importers:
       dti:
         specifier: workspace:*
         version: link:../dti
-      global-styles:
-        specifier: workspace:*
-        version: link:../global-styles
       react-icons:
         specifier: ^4.11.0
         version: 4.11.0(react@18.2.0)

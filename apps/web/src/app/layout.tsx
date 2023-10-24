@@ -5,8 +5,6 @@ import {
   SonnerToast,
 } from 'puas-components';
 
-import 'global-styles/global.css';
-
 // !TEMP
 const isLoggedIn = true;
 
@@ -20,7 +18,7 @@ const RootLayout = ({
       <body>
         <SkipNavButton />
         <LandscapeMenu isLoggedIn={isLoggedIn}>
-          {isLoggedIn && <Header />}
+          {!!isLoggedIn && <Header />}
           <main id='main'>{children}</main>
           <SonnerToast />
         </LandscapeMenu>

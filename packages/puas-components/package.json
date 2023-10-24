@@ -22,7 +22,6 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "dti": "workspace:*",
-    "global-styles": "workspace:*",
     "hooks": "workspace:*",
     "images": "workspace:*",
     "next": "^13.5.3",

@@ -12,7 +12,7 @@ import { BsChevronLeft } from 'react-icons/bs';
 
 import { type LandscapeMenuProps } from '../interface';
 
-const LandscapeMenu = (props: LandscapeMenuProps) => {
+const LandscapeMenu = (props: LandscapeMenuProps): JSX.Element => {
   // =====================================================================
   // STATEMENTS ----------------------------------------------------------
   // =====================================================================

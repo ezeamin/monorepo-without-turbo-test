@@ -6,11 +6,10 @@ import Image from 'next/image';
 
 import { usePortrait } from 'hooks';
 
-import { Button } from 'ui';
+import { Button, Skeleton } from 'ui';
 
 import { DTI, DTI_LIST } from 'dti';
 
-// import Skeleton from 'ui/Skeleton';
 import PortraitMenu from './Menu/PortraitMenu';
 import ProfileAvatar from './ProfileAvatar';
 import ThemeToggler from './ThemeToggler';
@@ -60,9 +59,8 @@ const Header = (): JSX.Element => {
           isScrolling ? 'header-scrolling' : ''
         }`}
       >
-        {/* TODO: Skeleton */}
-        {/* <Skeleton />
-        <Skeleton type="circle" /> */}
+        <Skeleton />
+        <Skeleton type="circle" />
       </header>
     );
   }

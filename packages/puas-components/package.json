@@ -29,6 +29,7 @@
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-icons": "^4.11.0",
+    "sonner": "^1.0.3",
     "ui": "workspace:*",
     "utilities": "workspace:*",
     "vaul": "^0.7.5"

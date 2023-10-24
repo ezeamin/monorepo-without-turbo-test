@@ -29,6 +29,7 @@ module.exports = {
         'packages/config',
         'packages/eslint-config-custom',
         'packages/global-styles',
+        'packages/images',
         'packages/prettier-config-custom',
         'packages/puas-components',
         'packages/tailwind-config',

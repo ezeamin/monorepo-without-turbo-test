@@ -50,6 +50,9 @@ importers:
       global-styles:
         specifier: workspace:*
         version: link:../../packages/global-styles
+      images:
+        specifier: workspace:*
+        version: link:../../packages/images
       next:
         specifier: ^13.5.6
         version: 13.5.6(react-dom@18.2.0)(react@18.2.0)
@@ -181,6 +184,8 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
+  packages/images: {}
+
   packages/prettier-config-custom: {}
 
   packages/puas-components:
@@ -197,6 +202,9 @@ importers:
       hooks:
         specifier: workspace:*
         version: link:../hooks
+      images:
+        specifier: workspace:*
+        version: link:../images
       next:
         specifier: ^13.5.3
         version: 13.5.3(react-dom@18.2.0)(react@18.2.0)

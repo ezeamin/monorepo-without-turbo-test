@@ -19,7 +19,7 @@ const LogoutButton = (props: LogoutButtonProps): JSX.Element => {
   return (
     <button
       className={cn(
-        'bg-red-100 dark:bg-error duration-300 gap-x-4 hover:bg-red-200 hover:dark:bg-red-700 inline-block items-center mb-5 py-2 rounded shadow text-center tooltip tooltip-right',
+        'bg-red-100 dark:bg-error duration-300 gap-x-4 hover:bg-red-200 hover:dark:bg-red-700 inline-block items-center py-2 rounded shadow text-center tooltip tooltip-right',
         className
       )}
       data-testid={DTI(DTI_LIST.BUTTON('logout'))}

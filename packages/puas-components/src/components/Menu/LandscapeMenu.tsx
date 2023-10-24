@@ -57,7 +57,7 @@ const LandscapeMenu = (props: LandscapeMenuProps): JSX.Element => {
           {/* Logout Button */}
           <div className="absolute inset-x-4 bottom-0">
             <hr className="my-2 w-full" />
-            <LogoutButton className="h-10 w-full" open={open} />
+            <LogoutButton className="h-10 w-full mb-5" open={open} />
           </div>
         </div>
       )}

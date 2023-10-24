@@ -50,11 +50,11 @@ const PortraitMenu = (): JSX.Element => {
                 <MenuOptionButton el={el} key={el.id} />
               ))}
             </div>
-            <div className="flex gap-4 justify-center max-w-md mx-auto">
+            <div className="flex gap-4 justify-center max-w-md mx-auto mb-5">
               {/* Boton para Cuenta */}
               <AccountButton />
               {/* Boton para el Tema */}
-              <ThemeToggler className="bg-sky-100 dark:bg-neutral duration-500 flex gap-x-4 items-center mb-5 px-4 rounded shadow text-center" />
+              <ThemeToggler className="bg-sky-100 dark:bg-neutral duration-500 flex gap-x-4 items-center px-4 rounded shadow text-center" />
               {/* Boton para Cerrar Sesion */}
               <LogoutButton className="px-4" open />
             </div>

@@ -4,6 +4,7 @@ import {
   SkipNavButton,
   SonnerToast,
 } from 'puas-components';
+import ThemeProvider from '../providers/ThemeProvider';
 
 // !TEMP
 const isLoggedIn = true;
@@ -16,12 +17,14 @@ const RootLayout = ({
   return (
     <html lang='es' suppressHydrationWarning>
       <body>
-        <SkipNavButton />
-        <LandscapeMenu isLoggedIn={isLoggedIn}>
-          {!!isLoggedIn && <Header />}
-          <main id='main'>{children}</main>
-          <SonnerToast />
-        </LandscapeMenu>
+        <ThemeProvider>
+          <SkipNavButton />
+          <LandscapeMenu isLoggedIn={isLoggedIn}>
+            {!!isLoggedIn && <Header />}
+            <main id='main'>{children}</main>
+            <SonnerToast />
+          </LandscapeMenu>
+        </ThemeProvider>
       </body>
     </html>
   );

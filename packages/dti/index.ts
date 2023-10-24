@@ -2,7 +2,14 @@ export const DTI = (val: string) =>
   process.env.ENV === "test" ? val : undefined;
 
 export const DTI_LIST = {
+  ACTIONS: {
+    BACK: "back",
+    PRINT: "print",
+    GO_TO_TOP: "go-to-top",
+    TOGGLE_THEME: "toggle-theme",
+  },
   BUTTON: (val: string) => `${val}-button`,
+  CARD: (pos: number) => `card-#${pos}`,
   FORM: {
     ADDRESS: "address-input",
     AMOUNT: "amount-input",
@@ -49,23 +56,7 @@ export const DTI_LIST = {
     UNIT: "unit-input",
     ZIP: "zip-input",
   },
-  ACTIONS: {
-    BACK: "back",
-    PRINT: "print",
-    GO_TO_TOP: "go-to-top",
-    TOGGLE_THEME: "toggle-theme",
-  },
-  TABLES: {
-    CELL: (val: string) => `${val}-cell`,
-    ROW: (pos: number) => `row-#${pos}`,
-    TABLE: (pos: number) => `table-#${pos}`,
-  },
-  CARD: (pos: number) => `card-#${pos}`,
-  PAGINATION: {
-    ENTRIES: "select-entries",
-    PAGE_SELECTOR: "page-selector",
-    CURRENT_PAGE_MESSAGE: "current-page-message",
-  },
+  ICON: (val: string) => `${val}-icon`,
   KEYWORDS: {
     ACTION_BUTTONS: "action-buttons",
     AMOUNT: "amount",
@@ -105,5 +96,15 @@ export const DTI_LIST = {
     IMAGE: (val: number) => `${val}-image`,
     LINK: (val: number) => `${val}-link`,
     LOGO: "logo",
+  },
+  PAGINATION: {
+    ENTRIES: "select-entries",
+    PAGE_SELECTOR: "page-selector",
+    CURRENT_PAGE_MESSAGE: "current-page-message",
+  },
+  TABLES: {
+    CELL: (val: string) => `${val}-cell`,
+    ROW: (pos: number) => `row-#${pos}`,
+    TABLE: (pos: number) => `table-#${pos}`,
   },
 };

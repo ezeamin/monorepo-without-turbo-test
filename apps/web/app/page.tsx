@@ -1,21 +1,9 @@
-'use client';
-
-import { useState } from 'react';
-import { Button, IconButton, Pagination } from 'ui';
+import { Button, IconButton } from 'ui';
 import { MdFirstPage, MdLastPage } from 'react-icons/md';
+import PaginationExample from 'ui/src/components/Pagination/Pagination.example';
+import { DTI, DTI_LIST } from '../../../packages/dti';
 
 const Home = (): JSX.Element => {
-
-  const [page1, setPage1] = useState(0);
-  const [page2, setPage2] = useState(0);
-
-  const changePage1 = (_e: React.SyntheticEvent, newPage: number):void => {
-    setPage1(newPage)
-  }
-  const changePage2 = (_e: React.SyntheticEvent, newPage: number):void => {
-    setPage2(newPage)
-  }
-
   return (
     <main className="bg-slate-200">
       <hr />
@@ -24,7 +12,7 @@ const Home = (): JSX.Element => {
         className='m-2'
         colorDark="dark:bg-slate-700"
         colorLight="bg-gray-100"
-        dti="example"
+        dti={DTI(DTI_LIST.BUTTON('example'))}
         textColorLight="text-blue-700"
         // unstyled
       >
@@ -35,42 +23,21 @@ const Home = (): JSX.Element => {
       <h1 className="p-2 text-blue-400">ICON BUTTON:</h1>
       <IconButton
         className='m-2'
-        dti='outlined-icon'
+        dti={DTI(DTI_LIST.ICON('outlined-icon'))}
         iconComponent={<MdLastPage color="#fff"/>}
       />
       <IconButton
         className='hover:bg-slate-500'
         colorDark='dark:bg-slate-700'
         colorLight='bg-slate-600'
-        dti='colored-icon'
+        dti={DTI(DTI_LIST.ICON('colored-icon'))}
         iconComponent={<MdFirstPage color="#fff"/>}
         label="with Color and Tooltip"
       />
 
       <hr />
       <h1 className="p-2 text-blue-400">PAGINATION:</h1>
-      <div className='md:w-6/12 w-full'>
-        Width 50%
-        <Pagination 
-          count = {150} 
-          dti = "pagination50"
-          onPageChange = {changePage1}
-          page = {page1} 
-          rowsPerPage = {10}
-        />
-      </div>
-      <div className='w-full'>
-        Width 100%
-        <Pagination 
-          count = {150} 
-          dti = "pagination100"
-          onPageChange = {changePage2}
-          page = {page2} 
-          rowsPerPage = {10}
-        />
-      </div>
-
-      
+      <PaginationExample />      
     </main>
   );
 };

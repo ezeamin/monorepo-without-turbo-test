@@ -51,7 +51,10 @@ const Pagination = (props: PaginationPropsType): JSX.Element => {
   // TODO: revisar hover modo oscuro
 
   return (
-    <div className="flow-root w-full">
+    <div
+      className="flow-root w-full"
+      data-testid={DTI(DTI_LIST.PAGINATION.ENTRIES)}
+    >
       <IconButton
         className="float-left hover:bg-slate-500 m-2"
         colorDark="dark:bg-slate-700"

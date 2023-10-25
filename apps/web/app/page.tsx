@@ -1,6 +1,8 @@
 import { Button, IconButton } from 'ui';
 import { MdFirstPage, MdLastPage } from 'react-icons/md';
 import GridExample from 'ui/src/components/Grid/Grid.example';
+import PaginationExample from 'ui/src/components/Pagination/Pagination.example';
+import { DTI, DTI_LIST } from '../../../packages/dti';
 
 const Home = (): JSX.Element => {
   return (
@@ -11,7 +13,7 @@ const Home = (): JSX.Element => {
         className='m-2'
         colorDark="dark:bg-slate-700"
         colorLight="bg-gray-100"
-        dti="example"
+        dti={DTI(DTI_LIST.BUTTON('example'))}
         textColorLight="text-blue-700"
         // unstyled
       >
@@ -33,10 +35,14 @@ const Home = (): JSX.Element => {
         className='hover:bg-slate-500'
         colorDark='dark:bg-slate-700'
         colorLight='bg-slate-600'
-        dti='colored-icon'
+        dti={DTI(DTI_LIST.ICON('colored-icon'))}
         iconComponent={<MdFirstPage color="#fff"/>}
         label="with Color and Tooltip"
       />
+
+      <hr />
+      <h1 className="p-2 text-blue-400">PAGINATION:</h1>
+      <PaginationExample />      
     </main>
   );
 };

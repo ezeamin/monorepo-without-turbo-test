@@ -4,10 +4,11 @@ import { cn, removeLineBreaks } from 'utilities';
 
 import {
   AlignContentTypes,
-  ColSpanTypes,
-  ColTypes,
   JustifyContentTypes,
+  LgColTypes,
+  MdColTypes,
   RowSpanTypes,
+  SmColTypes,
   VerticalAlignTypes,
 } from './Grid.classes';
 
@@ -18,12 +19,13 @@ import type { GridPropsType } from './Grid.types';
  * @param props - The component props.
  * @param alignContent - How rows are positioned in multi-row flex and grid containers.
  * @param className - Additional class names to apply to the icon container.
- * @param cols - For specifying the columns in a grid layout.
- * @param colSpan - How elements are sized and placed across grid columns.
  * @param container - For fixing an element's width to the current breakpoint.
  * @param item - To control the flexbox behavior of an element.
  * @param justifyContent - How flex and grid items are positioned along a container's main axis.
+ * @param md - How elements are sized and placed across grid columns using responsive design.
+ * @param lg - How elements are sized and placed across grid columns using responsive design.
  * @param rowSpan - How elements are sized and placed across grid rows.
+ * @param sm - How elements are sized and placed across grid columns using responsive design.
  * @param verticalAlign - How an individual flex or grid item is positioned along its container's cross axis.
  * @returns JSX.Element The rendered Icon component.
  *
@@ -40,12 +42,13 @@ const Grid = (props: GridPropsType): JSX.Element => {
     alignContent = '',
     children,
     className = '',
-    cols = 1,
-    colSpan = 1,
     container = false,
     item = false,
     justifyContent = '',
+    lg,
+    md,
     rowSpan = 1,
+    sm,
     verticalAlign = '',
   } = props;
 
@@ -54,12 +57,13 @@ const Grid = (props: GridPropsType): JSX.Element => {
       className={cn(
         removeLineBreaks`
           ${alignContent ? AlignContentTypes[alignContent] : ''}
-          ${ColSpanTypes[colSpan]}
-          ${ColTypes[cols]}
-          ${container ? 'gap-2 grid' : ''}
+          ${container ? 'gap-2 grid grid-cols-12' : ''}
           ${justifyContent ? JustifyContentTypes[justifyContent] : ''}
-          ${item ? 'flex' : ''}
+          ${item ? 'flex col-span-12' : ''}
+          ${lg ? LgColTypes[lg] : ''}
+          ${md ? MdColTypes[md] : ''}
           ${RowSpanTypes[rowSpan]}
+          ${sm ? SmColTypes[sm] : ''}
           ${verticalAlign ? VerticalAlignTypes[verticalAlign] : ''}
           p-2`,
         className

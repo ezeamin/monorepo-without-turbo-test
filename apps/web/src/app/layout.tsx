@@ -1,6 +1,13 @@
-import { Header } from 'puas-components';
+import {
+  Header,
+  LandscapeMenu,
+  SkipNavButton,
+  SonnerToast,
+} from 'puas-components';
+import ThemeProvider from '../providers/ThemeProvider';
 
-import 'global-styles/global.css';
+// !TEMP
+const isLoggedIn = true;
 
 const RootLayout = ({
   children,
@@ -10,8 +17,15 @@ const RootLayout = ({
   return (
     <html lang='es' suppressHydrationWarning>
       <body>
-          <Header />
-          {children}
+        <ThemeProvider>
+          <SkipNavButton />
+          <LandscapeMenu isLoggedIn={isLoggedIn}>
+            {/* eslint-disable-next-line -- This will be different in the future */}
+            {!!isLoggedIn && <Header />}
+            <main id='main'>{children}</main>
+            <SonnerToast />
+          </LandscapeMenu>
+        </ThemeProvider>
       </body>
     </html>
   );

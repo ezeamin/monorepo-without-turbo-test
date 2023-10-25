@@ -1,6 +1,0 @@
-@import './tailwind.css';
-
-main {
-  background-color: rgb(87, 87, 87) !important;
-  min-height: 100vh;
-}

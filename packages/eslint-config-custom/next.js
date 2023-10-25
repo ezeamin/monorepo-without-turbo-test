@@ -65,6 +65,8 @@ module.exports = {
       },
     ],
 
-    'import/order': "off",
+    'import/order': 'off',
+
+    'no-implicit-coercion': 'off',
   },
 };

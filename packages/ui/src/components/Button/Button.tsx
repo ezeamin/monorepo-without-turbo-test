@@ -6,7 +6,6 @@ import { cn, removeLineBreaks } from 'utilities';
 
 import Icon from '../Icon/Icon';
 
-import '../../styles/styles.css';
 import './Button.styles.css';
 
 import type { ButtonPropsType } from './Button.types';

@@ -1,19 +1,14 @@
-import { Button, IconButton } from 'ui';
-import { MdFirstPage, MdLastPage } from 'react-icons/md';
-import PaginationExample from 'ui/src/components/Pagination/Pagination.example';
-import { DTI, DTI_LIST } from '../../../packages/dti';
+// import { Button, IconButton } from 'ui';
+// import { MdAddToDrive, MdFirstPage, MdLastPage } from 'react-icons/md';
 
 const Home = (): JSX.Element => {
   return (
-    <main className="bg-slate-200">
-      <hr />
-      <h1 className="p-2 text-blue-400">BUTTON:</h1>
-      <Button
-        className='m-2'
-        colorDark="dark:bg-slate-700"
-        colorLight="bg-gray-100"
-        dti={DTI(DTI_LIST.BUTTON('example'))}
-        textColorLight="text-blue-700"
+    <>
+      {/* <Button
+        colorDark='dark:bg-slate-700'
+        colorLight='bg-gray-100'
+        dti='example'
+        textColorLight='text-blue-700'
         // unstyled
       >
         BUTTON COMPONENT
@@ -34,11 +29,11 @@ const Home = (): JSX.Element => {
         iconComponent={<MdFirstPage color="#fff"/>}
         label="with Color and Tooltip"
       />
-
-      <hr />
-      <h1 className="p-2 text-blue-400">PAGINATION:</h1>
-      <PaginationExample />      
-    </main>
+      <IconButton
+        dti='outlined-icon'
+        iconComponent={<MdLastPage color='#fff' />}
+      /> */}
+    </>
   );
 };
 

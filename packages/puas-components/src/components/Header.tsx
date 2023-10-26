@@ -6,15 +6,15 @@ import Image from 'next/image';
 
 import { usePortrait } from 'hooks';
 
+import { Button, Skeleton } from 'ui';
+
 import { DTI, DTI_LIST } from 'dti';
 
-// import Skeleton from 'ui/Skeleton';
-import PortraitMenu from './PortraitMenu';
+import PortraitMenu from './Menu/PortraitMenu';
 import ProfileAvatar from './ProfileAvatar';
-import ThemeTogglerButton from './ThemeTogglerButton';
-import { Button } from 'ui';
-
-const LOGO_PATH = '/img/logos/logo-144.png';
+import ThemeToggler from './ThemeToggler';
+// @ts-expect-error - logo is not a component
+import logo from 'images/logos/logo-144.png';
 
 const Header = (): JSX.Element => {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -59,9 +59,8 @@ const Header = (): JSX.Element => {
           isScrolling ? 'header-scrolling' : ''
         }`}
       >
-        {/* TODO: Skeleton */}
-        {/* <Skeleton />
-        <Skeleton type="circle" /> */}
+        <Skeleton />
+        <Skeleton type="circle" />
       </header>
     );
   }
@@ -77,7 +76,9 @@ const Header = (): JSX.Element => {
           alt="Poder Judicial de Tucumán"
           className="w-12 h-12"
           height={100}
-          src={LOGO_PATH}
+          // DO NOT delete, it WILL throw an ESLint error
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access -- logo is not a component
+          src={typeof logo === 'object' && 'src' in logo ? logo.src : ''}
           width={100}
         />
         <PortraitMenu />
@@ -115,7 +116,7 @@ const Header = (): JSX.Element => {
         </Button>
       </nav>
       <div className="flex gap-4">
-        <ThemeTogglerButton />
+        <ThemeToggler />
         <ProfileAvatar />
       </div>
     </header>

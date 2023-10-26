@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
-    "global-styles": "workspace:*",
     "react-icons": "^4.11.0",
     "utilities": "workspace:*",
     "dti": "workspace:*"

@@ -1,36 +1,46 @@
 import type { DataTestId } from '../../types';
 import type {
-  BgColorProp,
-  HeightType,
-  TextColorProp,
-  WidthType,
+  ColorIntensityType,
+  ColorNameType,
+  TextColorType,
 } from '../../types/tailwind';
 
-interface CheckboxOption {
-  id: number;
-  description: string;
+interface CheckboxColorType {
+  light:
+    | 'btn-neutral'
+    | 'btn-primary'
+    | 'btn-secondary'
+    | 'btn-accent'
+    | 'btn-ghost'
+    | 'btn-link'
+    | 'btn-info'
+    | 'btn-success'
+    | 'btn-warning'
+    | 'btn-error'
+    | `bg-${ColorNameType}-${ColorIntensityType}`;
+  dark:
+    | 'dark:btn-neutral'
+    | 'dark:btn-primary'
+    | 'dark:btn-secondary'
+    | 'dark:btn-accent'
+    | 'dark:btn-ghost'
+    | 'dark:btn-link'
+    | 'dark:btn-info'
+    | 'dark:btn-success'
+    | 'dark:btn-warning'
+    | 'dark:btn-error'
+    | `dark:bg-${ColorNameType}-${ColorIntensityType}`;
 }
 
-interface Props extends React.Props<Checkbox> {
-    label : string;
-    style: any;
-    defaultChecked?: boolean;
-    checkedIcon?: any;
-    uncheckedIcon?: any;
-};
-
-export type ChecboxPropsType = DataTestId & {
-  className?: string;
-  disabled?: boolean;
-  msgError?: string;
-  placeholder: string;
-  positionedColorOption?: {
-    bgColor: BgColorProp['color'];
-    textColor: TextColorProp['textColor'];
+export type CheckboxPropsType = React.HTMLAttributes<HTMLButtonElement> &
+  DataTestId & {
+    className?: string;
+    ariaLabel: string;
+    colorDark?: CheckboxColorType['dark'];
+    colorLight?: CheckboxColorType['light'];
+    textColorDark?: TextColorType['dark'];
+    textColorLight?: TextColorType['light'];
+    disabled?: boolean;
+    iconComponent: React.ReactNode;
+    label?: string;
   };
-  selectedColorOption?: BgColorProp['color'];
-  sizing?: {
-    height?: HeightType;
-    width?: WidthType;
-  };
-};

@@ -1,10 +1,11 @@
 import Image from 'next/image';
 
-import { DTI, DTI_LIST } from 'dti';
-
 import { Button } from 'ui';
 
-const FALLBACK = '/img/avatar-placeholder.webp';
+import { DTI, DTI_LIST } from 'dti';
+
+const FALLBACK =
+  'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png';
 const user = {
   name: '',
   profilePicture: '',

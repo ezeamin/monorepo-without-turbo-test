@@ -52,5 +52,21 @@ module.exports = {
     ],
 
     'eslint-comments/require-description': ['error', { ignore: [] }],
+
+    // Disables the rule that prohibits "kebab-case" in file names.
+    'unicorn/filename-case': [
+      'error',
+      {
+        cases: {
+          camelCase: true, // Allows camelCase file names (initial letter in lowercase)
+          pascalCase: true, // Allows PascalCase file names (initial letter in uppercase)
+          kebabCase: false, // Disables kebab-case
+        },
+      },
+    ],
+
+    'import/order': 'off',
+
+    'no-implicit-coercion': 'off',
   },
 };

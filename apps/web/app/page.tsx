@@ -1,5 +1,4 @@
 import { Button, IconButton } from 'ui';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { MdAddToDrive, MdFirstPage, MdLastPage } from 'react-icons/md';
 
 const Home = (): JSX.Element => {

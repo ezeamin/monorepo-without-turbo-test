@@ -21,15 +21,17 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
-    "global-styles": "workspace:*",
+    "dti": "workspace:*",
     "hooks": "workspace:*",
+    "images": "workspace:*",
     "next": "^13.5.3",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-icons": "^4.11.0",
+    "sonner": "^1.0.3",
     "ui": "workspace:*",
     "utilities": "workspace:*",
-    "dti": "workspace:*"
+    "vaul": "^0.7.5"
   },
   "prettier": "prettier-config-custom"
 }

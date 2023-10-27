@@ -24,11 +24,11 @@ module.exports = {
       2,
       'always',
       [
-        'apps/[module_name]',
+        'apps/web',
         'global',
         'packages/config',
         'packages/eslint-config-custom',
-        'packages/global-styles',
+        'packages/images',
         'packages/prettier-config-custom',
         'packages/puas-components',
         'packages/tailwind-config',

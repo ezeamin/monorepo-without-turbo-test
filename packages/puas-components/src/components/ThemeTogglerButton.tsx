@@ -1,17 +1,21 @@
 'use client';
 
-import { cn } from 'utilities';
+import { Button } from 'ui';
 
-import { useTheme } from 'next-themes';
+import { cn } from 'utilities';
 
 import { DTI, DTI_LIST } from 'dti';
 
+import { useTheme } from 'next-themes';
 import { FaSun } from 'react-icons/fa';
 import { IoMoon } from 'react-icons/io5';
-import { Button } from 'ui';
 
 import type { ThemeTogglerButtonProps } from './interface';
 
+/**
+ * DO NOT import this component directly, import it from "ThemeToggler"
+ * @returns
+ */
 const ThemeTogglerButton = (props: ThemeTogglerButtonProps): JSX.Element => {
   const { className, ...buttonProps } = props;
 

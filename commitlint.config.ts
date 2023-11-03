@@ -25,10 +25,12 @@ module.exports = {
       'always',
       [
         'apps/web',
+        'apps/backoffice-psae',
         'global',
         'packages/config',
         'packages/eslint-config-custom',
         'packages/images',
+        'packages/multizones',
         'packages/prettier-config-custom',
         'packages/puas-components',
         'packages/tailwind-config',

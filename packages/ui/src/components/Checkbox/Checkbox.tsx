@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 
 import { cn, removeLineBreaks } from 'utilities';
 
-import type { CheckboxPropsType } from './Checkbox.types';
+import type { CheckboxProps } from './Checkbox.types';
 
-const Checkbox = (props: CheckboxPropsType): JSX.Element => {
+const Checkbox = (props: CheckboxProps): JSX.Element => {
   const {
     ariaLabel,
     className = '',
@@ -25,7 +25,7 @@ const Checkbox = (props: CheckboxPropsType): JSX.Element => {
   }, [disabled]);
 
   return (
-    <div className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+    <div className="w-full flex gap-2">
       <input
         aria-label={ariaLabel}
         checked={isChecked}

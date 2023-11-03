@@ -4,9 +4,9 @@ import logo from 'images/logos/logo-144.png';
 const modules = [
   {
     id: 1,
-    description: 'Ejemplo 1',
+    description: 'Backoffice Portal SAE',
     img: logo,
-    url: '/prueba1',
+    url: '/backoffice-psae',
   },
   {
     id: 2,

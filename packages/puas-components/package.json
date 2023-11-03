@@ -10,9 +10,9 @@
     "prettier:write": "npx prettier -w ."
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
-    "@types/react": "^18.2.23",
-    "@types/react-dom": "^18.2.8",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.1",
+    "@types/react": "^18.2.34",
+    "@types/react-dom": "^18.2.14",
     "clsx": "^2.0.0",
     "eslint-config-custom": "workspace:*",
     "prettier-config-custom": "workspace:*",
@@ -24,14 +24,14 @@
     "dti": "workspace:*",
     "hooks": "workspace:*",
     "images": "workspace:*",
-    "next": "^13.5.3",
+    "next": "^14.0.1",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-icons": "^4.11.0",
-    "sonner": "^1.0.3",
+    "sonner": "^1.1.0",
     "ui": "workspace:*",
     "utilities": "workspace:*",
-    "vaul": "^0.7.5"
+    "vaul": "^0.7.7"
   },
   "prettier": "prettier-config-custom"
 }

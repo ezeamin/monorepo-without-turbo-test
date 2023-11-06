@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "build": "env-cmd -f ./.env.production turbo run build",
     "clean:cache": "pnpm store prune",
-    "dev": "turbo run dev --concurrency 18",
+    "dev": "env-cmd -f ./.env.development turbo run dev --concurrency 18",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "prettier:check": "npx prettier -c .",
@@ -39,5 +39,8 @@
     "tsconfig": "workspace:*",
     "turbo": "latest",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
   }
 }

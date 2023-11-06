@@ -1,3 +1,18 @@
+export interface CheckboxColorType {
+  light:
+    | 'btn-neutral'
+    | 'btn-primary'
+    | 'btn-secondary'
+    | 'btn-ghost'
+    | `bg-${ColorNameType}-${ColorIntensityType}`;
+  dark:
+    | 'dark:btn-neutral'
+    | 'dark:btn-primary'
+    | 'dark:btn-secondary'
+    | 'dark:btn-ghost'
+    | `dark:bg-${ColorNameType}-${ColorIntensityType}`;
+}
+
 export interface BgColorProp {
   color?:
     | 'bg-black'

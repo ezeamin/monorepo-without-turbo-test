@@ -1,24 +1,8 @@
 import type { DataTestId } from '../../types';
 import type {
-  ColorIntensityType,
-  ColorNameType,
-  TextColorType,
+CheckboxColorType,
+TextColorType,
 } from '../../types/tailwind';
-
-interface CheckboxColorType {
-  light:
-    | 'btn-neutral'
-    | 'btn-primary'
-    | 'btn-secondary'
-    | 'btn-ghost'
-    | `bg-${ColorNameType}-${ColorIntensityType}`;
-  dark:
-    | 'dark:btn-neutral'
-    | 'dark:btn-primary'
-    | 'dark:btn-secondary'
-    | 'dark:btn-ghost'
-    | `dark:bg-${ColorNameType}-${ColorIntensityType}`;
-}
 
 export interface CheckboxProps {
   dti: DataTestId;

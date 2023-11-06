@@ -19,4 +19,4 @@ const multizones = {
   },
 };
 
-module.exports = { ...multizones };
+module.exports = multizones;

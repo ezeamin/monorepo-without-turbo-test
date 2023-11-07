@@ -13,7 +13,6 @@ const Home = (): JSX.Element => {
       >
         BUTTON COMPONENT
       </Button>
-
       <hr />
       <h1 className="p-2 text-blue-400">ICON BUTTON:</h1>
       <IconButton

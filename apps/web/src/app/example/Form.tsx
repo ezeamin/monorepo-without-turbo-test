@@ -1,6 +1,6 @@
 'use client';
 
-import { TextInput } from 'ui';
+import { TextInput, DateInput } from 'ui';
 import { useZodForm } from 'hooks';
 import { exampleSchema } from 'form-schemas/schemas/new_folder_each_app/exampleSchema';
 
@@ -15,6 +15,7 @@ const Form = (): JSX.Element => {
         label='Texto'
         name='resolution'
       />
+      <DateInput control={control} dti='hola' label='Fecha' name='date' />
     </form>
   );
 };

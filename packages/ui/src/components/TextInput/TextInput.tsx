@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 import { cn } from 'utilities';
 
 import InputController from '../InputController/InputController';
@@ -11,14 +13,21 @@ const TextInput = <T extends FormSchemas>(
   props: InputProps<T>
 ): JSX.Element => {
   const {
+    className = '',
     control,
     name,
     label,
-    className = '',
     type = 'text',
     dti,
     ...rest
   } = props;
+
+  const [disabled, setDisabled] = useState(rest.disabled ?? true);
+
+  // Wait for client to be hydrated
+  useEffect(() => {
+    setDisabled(rest.disabled ?? false);
+  }, [rest.disabled]);
 
   return (
     <fieldset className={cn('form-control w-72', className)}>
@@ -35,6 +44,7 @@ const TextInput = <T extends FormSchemas>(
               error && 'border-error'
             }`}
             data-testid={dti}
+            disabled={disabled}
             id={name as string}
             onBlur={field.onBlur}
             onChange={field.onChange}

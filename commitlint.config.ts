@@ -24,10 +24,15 @@ module.exports = {
       2,
       'always',
       [
+        // APPS
         'apps/web',
+        // GLOBAL
         'global',
+        // PACKAGES
         'packages/config',
         'packages/eslint-config-custom',
+        'packages/form-schemas',
+        'packages/hooks',
         'packages/images',
         'packages/prettier-config-custom',
         'packages/puas-components',

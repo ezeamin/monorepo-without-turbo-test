@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "build": "env-cmd -f ./.env.production turbo run build",
     "clean:cache": "pnpm store prune",
-    "dev": "turbo run dev --concurrency 18",
+    "dev": "env-cmd -f ./.env.development turbo run dev --concurrency 18",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "prettier:check": "npx prettier -c .",
@@ -27,17 +27,20 @@
   "packageManager": "pnpm@8.8.10",
   "name": "puas-monorepo",
   "dependencies": {
-    "@commitlint/cli": "^17.7.2",
-    "@commitlint/config-angular": "^17.7.0",
-    "@types/node": "^20.7.1",
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-angular": "^18.1.0",
+    "@types/node": "^20.8.10",
     "husky": "^8.0.3",
-    "npm-check-updates": "^16.14.4",
+    "npm-check-updates": "^16.14.6",
     "prettier": "^3.0.3",
     "react-icons": "^4.11.0",
     "syncpack": "^11.2.1",
-    "tailwind-merge": "^1.14.0",
+    "tailwind-merge": "^2.0.0",
     "tsconfig": "workspace:*",
     "turbo": "latest",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
   }
 }

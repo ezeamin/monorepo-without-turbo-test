@@ -22,7 +22,7 @@ const RootLayout = ({
           <LandscapeMenu isLoggedIn={isLoggedIn}>
             {/* eslint-disable-next-line -- This will be different in the future */}
             {!!isLoggedIn && <Header />}
-            <main id='main'>{children}</main>
+            <main className='modules-padding' id='main'>{children}</main>
             <SonnerToast />
           </LandscapeMenu>
         </ThemeProvider>

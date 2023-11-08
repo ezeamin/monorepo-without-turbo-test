@@ -51,6 +51,9 @@ importers:
 
   apps/web:
     dependencies:
+      dti:
+        specifier: workspace:*
+        version: link:../../packages/dti
       form-schemas:
         specifier: workspace:*
         version: link:../../packages/form-schemas
@@ -315,6 +318,9 @@ importers:
       form-schemas:
         specifier: workspace:*
         version: link:../form-schemas
+      hooks:
+        specifier: workspace:*
+        version: link:../hooks
       react-hook-form:
         specifier: ^7.48.2
         version: 7.48.2(react@18.2.0)

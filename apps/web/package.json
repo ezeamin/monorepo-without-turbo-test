@@ -9,6 +9,7 @@
     "lint": "next lint || exit 0"
   },
   "dependencies": {
+    "dti": "workspace:*",
     "form-schemas": "workspace:*",
     "images": "workspace:*",
     "hooks": "workspace:*",

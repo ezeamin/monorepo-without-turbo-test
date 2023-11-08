@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useHydrate } from 'hooks';
 
 import { cn } from 'utilities';
 
@@ -22,12 +22,7 @@ const TextInput = <T extends FormSchemas>(
     ...rest
   } = props;
 
-  const [disabled, setDisabled] = useState(rest.disabled ?? true);
-
-  // Wait for client to be hydrated
-  useEffect(() => {
-    setDisabled(rest.disabled ?? false);
-  }, [rest.disabled]);
+  const hydrated = useHydrate();
 
   return (
     <fieldset className={cn('form-control w-72', className)}>
@@ -44,7 +39,7 @@ const TextInput = <T extends FormSchemas>(
               error && 'border-error'
             }`}
             data-testid={dti}
-            disabled={disabled}
+            disabled={!hydrated || rest.disabled}
             id={name as string}
             onBlur={field.onBlur}
             onChange={field.onChange}

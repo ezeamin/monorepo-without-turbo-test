@@ -1,5 +1,4 @@
 /* eslint-disable tsdoc/syntax -- tsdoc messes up with jsdoc*/
-
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -14,6 +13,8 @@ import type {
   DatePickerProps,
   OptionsDatePickerProps,
 } from './DatePicker.types';
+
+/* eslint-disable tsdoc/syntax -- tsdoc messes up with jsdoc*/
 
 const optionsDefaultValues: OptionsDatePickerProps = {
   enableTime: false,

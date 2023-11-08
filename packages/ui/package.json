@@ -26,6 +26,7 @@
     "dti": "workspace:*",
     "flatpickr": "^4.6.13",
     "form-schemas": "workspace:*",
+    "hooks": "workspace:*",
     "react-hook-form": "^7.48.2",
     "react-icons": "^4.11.0",
     "utilities": "workspace:*"

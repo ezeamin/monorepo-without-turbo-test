@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useHydrate } from 'hooks';
 
 import { cn } from 'utilities';
 
@@ -17,12 +17,7 @@ const DateInput = <T extends FormSchemas>(
 ): JSX.Element => {
   const { control, name, label, className = '', dti, ...rest } = props;
 
-  const [disabled, setDisabled] = useState(true);
-
-  // Wait for client to be hydrated
-  useEffect(() => {
-    setDisabled(false);
-  }, []);
+  const hydrated = useHydrate();
 
   return (
     <fieldset className={cn('form-control ', className)}>
@@ -39,7 +34,7 @@ const DateInput = <T extends FormSchemas>(
           fieldState: { error },
         }) => (
           <DatePicker
-            disabled={disabled}
+            disabled={!hydrated || rest.disabled}
             dti={dti}
             error={Boolean(error)}
             name={inputName}

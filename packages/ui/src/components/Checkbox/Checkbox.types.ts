@@ -1,8 +1,5 @@
 import type { DataTestId } from '../../types';
-import type {
-CheckboxColorType,
-TextColorType,
-} from '../../types/tailwind';
+import type { CheckboxColorType, TextColorType } from '../../types/tailwind';
 
 export interface CheckboxProps {
   dti: DataTestId;

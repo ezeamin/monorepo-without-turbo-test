@@ -24,11 +24,16 @@ module.exports = {
       2,
       'always',
       [
+        // APPS
         'apps/web',
         'apps/backoffice-psae',
+        // GLOBAL
         'global',
+        // PACKAGES
         'packages/config',
         'packages/eslint-config-custom',
+        'packages/form-schemas',
+        'packages/hooks',
         'packages/images',
         'packages/multizones',
         'packages/prettier-config-custom',

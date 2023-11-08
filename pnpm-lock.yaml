@@ -51,6 +51,9 @@ importers:
 
   apps/web:
     dependencies:
+      dti:
+        specifier: workspace:*
+        version: link:../../packages/dti
       form-schemas:
         specifier: workspace:*
         version: link:../../packages/form-schemas
@@ -309,9 +312,15 @@ importers:
       dti:
         specifier: workspace:*
         version: link:../dti
+      flatpickr:
+        specifier: ^4.6.13
+        version: 4.6.13
       form-schemas:
         specifier: workspace:*
         version: link:../form-schemas
+      hooks:
+        specifier: workspace:*
+        version: link:../hooks
       react-hook-form:
         specifier: ^7.48.2
         version: 7.48.2(react@18.2.0)
@@ -3587,6 +3596,10 @@ packages:
       keyv: 4.5.3
       rimraf: 3.0.2
     dev: true
+
+  /flatpickr@4.6.13:
+    resolution: {integrity: sha512-97PMG/aywoYpB4IvbvUJi0RQi8vearvU0oov1WW3k0WZPBMrTQVqekSX5CjSG/M4Q3i6A/0FKXC7RyAoAUUSPw==}
+    dev: false
 
   /flatted@3.2.9:
     resolution: {integrity: sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==}

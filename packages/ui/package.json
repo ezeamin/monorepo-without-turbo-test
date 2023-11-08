@@ -24,10 +24,12 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "dti": "workspace:*",
+    "flatpickr": "^4.6.13",
+    "form-schemas": "workspace:*",
+    "hooks": "workspace:*",
     "react-hook-form": "^7.48.2",
     "react-icons": "^4.11.0",
-    "utilities": "workspace:*",
-    "form-schemas": "workspace:*"
+    "utilities": "workspace:*"
   },
   "prettier": "prettier-config-custom"
 }

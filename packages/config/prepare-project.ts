@@ -10,29 +10,47 @@ const runPrepareScript = async () => {
     process.stdout.write('\x1b[33m🔧 Running prepare script...\x1b[0m\n\n');
 
     // Run husky install
-    process.stdout.write('⌛ (1/4) Installing Husky...');
+    process.stdout.write('⌛ (1/5) Installing Husky...');
     execSync('husky install');
     readline.clearLine(process.stdout, 0);
     readline.cursorTo(process.stdout, 0);
-    process.stdout.write('✅ (1/4) Installed Husky\n');
+    process.stdout.write('✅ (1/5) Installed Husky\n');
+
+    // Check if pnpm is installed
+    process.stdout.write('⌛ (2/5) Checking if pnpm is installed...');
+    try {
+      execSync('pnpm -v');
+      readline.clearLine(process.stdout, 0);
+      readline.cursorTo(process.stdout, 0);
+      process.stdout.write('✅ (2/5) pnpm is installed\n');
+    } catch (error) {
+      process.stdout.write('\n\x1b[31m❗(2/5) pnpm is not installed.\n');
+      process.stdout.write('⌛ (2/5) Installing pnpm...');
+
+      execSync('npm i -g pnpm', { stdio: 'inherit' });
+
+      readline.clearLine(process.stdout, 0);
+      readline.cursorTo(process.stdout, 0);
+      process.stdout.write('✅ (2/5) Installed pnpm\n');
+    }
 
     // Install global dependencies
-    process.stdout.write('⌛ (2/4) Installing global dependencies...');
+    process.stdout.write('⌛ (3/5) Installing global dependencies...');
     execSync(
       'pnpm install npm-check-updates typescript prettier eslint @trivago/prettier-plugin-sort-imports syncpack -g --silent'
     );
     readline.clearLine(process.stdout, 0);
     readline.cursorTo(process.stdout, 0);
-    process.stdout.write('✅ (2/4) Installed global dependencies\n');
+    process.stdout.write('✅ (3/5) Installed global dependencies\n');
 
     // Check for dependency updates
-    process.stdout.write('⌛ (3/4) Checking for dependency updates...');
+    process.stdout.write('⌛ (4/5) Checking for dependency updates...');
     const updates = execSync('ncu');
     console.log(`\n${updates}`);
-    process.stdout.write('✅ (3/4) Checked for dependency updates...\n');
+    process.stdout.write('✅ (4/5) Checked for dependency updates...\n');
 
     // Check the versions of the dependencies
-    process.stdout.write('⌛ (4/4) Checking for dependency versions...');
+    process.stdout.write('⌛ (5/5) Checking for dependency versions...');
 
     const projectDirectory = path.resolve(__dirname, '../..');
 
@@ -41,7 +59,7 @@ const runPrepareScript = async () => {
         cwd: projectDirectory,
         stdio: 'inherit',
       });
-      console.log('✅ (4/4) Checked for dependency versions');
+      console.log('✅ (5/5) Checked for dependency versions');
     } catch (error) {
       if (
         typeof error === 'object' &&

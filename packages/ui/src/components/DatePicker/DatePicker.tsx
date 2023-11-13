@@ -1,4 +1,3 @@
-/* eslint-disable tsdoc/syntax -- tsdoc messes up with jsdoc*/
 'use client';
 
 import { useEffect, useRef } from 'react';

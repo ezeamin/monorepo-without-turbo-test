@@ -15,7 +15,8 @@
     "strictNullChecks": true,
     "strict": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "esnext"],
   },
   "exclude": ["node_modules"]
 }

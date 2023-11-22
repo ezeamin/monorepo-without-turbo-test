@@ -11,23 +11,23 @@
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.2.1",
-    "@types/react": "^18.2.34",
-    "@types/react-dom": "^18.2.14",
+    "@types/react": "^18.2.38",
+    "@types/react-dom": "^18.2.17",
     "clsx": "^2.0.0",
     "eslint-config-custom": "workspace:*",
     "prettier-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.2"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "dti": "workspace:*",
     "hooks": "workspace:*",
     "images": "workspace:*",
-    "next": "^14.0.1",
+    "next": "^14.0.3",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
-    "react-icons": "^4.11.0",
+    "react-icons": "^4.12.0",
     "sonner": "^1.1.0",
     "ui": "workspace:*",
     "utilities": "workspace:*",

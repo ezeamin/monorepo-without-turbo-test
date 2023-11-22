@@ -10,10 +10,10 @@
     "prettier:write": "npx prettier -w ."
   },
   "devDependencies": {
-    "@types/react": "^18.2.34",
+    "@types/react": "^18.2.38",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.2"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",

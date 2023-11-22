@@ -18,7 +18,7 @@
       "cache": true
     },
     "dev": {
-      "cache": false,
+      "cache": true,
       "dotEnv": [".env.development"]
     },
     "deploy": {

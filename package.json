@@ -3,7 +3,7 @@
   "scripts": {
     "build": "env-cmd -f ./.env.production turbo run build",
     "clean:cache": "pnpm store prune",
-    "dev": "env-cmd -f ./.env.development turbo run dev --concurrency 18",
+    "dev": "env-cmd -f ./.env.development turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "prettier:check": "npx prettier -c .",

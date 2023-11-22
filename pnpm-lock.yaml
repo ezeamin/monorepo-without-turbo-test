@@ -173,9 +173,6 @@ importers:
       eslint-config-custom:
         specifier: workspace:*
         version: link:../../packages/eslint-config-custom
-      multizones:
-        specifier: workspace:*
-        version: link:../../packages/multizones
       tailwind-config:
         specifier: workspace:*
         version: link:../../packages/tailwind-config

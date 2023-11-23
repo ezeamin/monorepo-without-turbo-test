@@ -1,4 +1,4 @@
-const { MODULE_HOME_URL, MODULE_BACKOFFICE_PSAE_URL } = process.env;
+const { MODULE_HOME_URL, MODULE_BACKOFFICE_PSAE_URL } = require('./data');
 
 const multizones = {
   async rewrites() {

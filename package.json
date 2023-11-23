@@ -1,11 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "env-cmd -f ./.env.development concurrently  \"cd apps/web && pnpm dev\" \"cd apps/backoffice-psae && pnpm dev\"",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prettier:check": "npx prettier -c .",
-    "prettier:write": "npx prettier -w .",
-    "prepare": "pnpm i tsx -g && tsx ./packages/config/prepare-project.ts",
+    "dev": "concurrently  \"cd apps/web && pnpm dev\" \"cd apps/backoffice-psae && pnpm dev\"",
     "remove:modules": "npx npkill .",
     "syncpack:check": "npx syncpack list-mismatches",
     "syncpack:fix": "npx syncpack fix-mismatches ; pnpm i",

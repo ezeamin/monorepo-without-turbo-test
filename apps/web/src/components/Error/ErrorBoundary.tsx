@@ -1,3 +1,5 @@
+"use client";
+
 // no types for react-error-boundary
 import { Component, ReactNode } from 'react';
 

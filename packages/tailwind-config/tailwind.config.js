@@ -12,9 +12,9 @@ module.exports = {
     themes: [
       {
         light: {
-          ...daisyuiTheme['[data-theme=light]'],
+          ...daisyuiTheme.light,
           primary: '#3f75a8',
-          primaryContent: '#ffffff',
+          primaryContent: '#030303',
           secondary: '#723fa8',
           accent: '#3fa8a6',
           neutral: '#3b8bc4',
@@ -28,7 +28,7 @@ module.exports = {
           },
         },
         dark: {
-          ...daisyuiTheme['[data-theme=dark]'],
+          ...daisyuiTheme.dark,
           primary: '#3f75a8',
           secondary: '#723fa8',
           accent: '#3fa8a6',

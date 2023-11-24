@@ -9,18 +9,18 @@
     "lint": "next lint || exit 0"
   },
   "dependencies": {
-    "dti": "workspace:*",
-    "form-schemas": "workspace:*",
-    "images": "workspace:*",
-    "hooks": "workspace:*",
+    "dti": "*",
+    "form-schemas": "*",
+    "images": "*",
+    "hooks": "*",
     "next": "^14.0.3",
     "next-themes": "^0.2.1",
-    "puas-components": "workspace:*",
+    "puas-components": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.48.2",
     "react-icons": "^4.12.0",
-    "ui": "workspace:*",
+    "ui": "*",
     "zod": "^3.22.4"
   },
   "devDependencies": {
@@ -29,11 +29,11 @@
     "@types/node": "^20.9.4",
     "@types/react": "^18.2.38",
     "@types/react-dom": "^18.2.17",
-    "config": "workspace:*",
-    "eslint-config-custom": "workspace:*",
-    "multizones": "workspace:*",
-    "tailwind-config": "workspace:*",
-    "tsconfig": "workspace:*",
+    "config": "*",
+    "eslint-config-custom": "*",
+    "multizones": "*",
+    "tailwind-config": "*",
+    "tsconfig": "*",
     "typescript": "^5.3.2"
   }
 }

@@ -1,10 +1,10 @@
-import daisyuiLib from 'daisyui';
+const daisyuiLib = require('daisyui');
 
-import daisyuiTheme from 'daisyui/src/theming/themes';
+const daisyuiTheme = require('daisyui/src/theming/themes');
 
 module.exports = {
   content: [
-    '../../packages/ui/components/**/*.{ts,tsx}',
+    '../../packages/**/*.{ts,tsx}',
     '../../apps/**/*.{ts,tsx}',
   ],
   darkMode: ['class', '[data-theme="dark"]'],

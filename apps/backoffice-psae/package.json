@@ -9,14 +9,14 @@
     "lint": "next lint || exit 0"
   },
   "dependencies": {
-    "images": "workspace:*",
+    "images": "*",
     "next": "^14.0.3",
     "next-themes": "^0.2.1",
-    "puas-components": "workspace:*",
+    "puas-components": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
-    "ui": "workspace:*"
+    "ui": "*"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.0.3",
@@ -24,11 +24,11 @@
     "@types/node": "^20.9.4",
     "@types/react": "^18.2.38",
     "@types/react-dom": "^18.2.17",
-    "config": "workspace:*",
-    "eslint-config-custom": "workspace:*",
-    "multizones": "workspace:*",
-    "tailwind-config": "workspace:*",
-    "tsconfig": "workspace:*",
+    "config": "*",
+    "eslint-config-custom": "*",
+    "multizones": "*",
+    "tailwind-config": "*",
+    "tsconfig": "*",
     "typescript": "^5.3.2"
   }
 }

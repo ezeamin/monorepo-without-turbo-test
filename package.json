@@ -1,12 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "concurrently  \"cd apps/web && pnpm dev\" \"cd apps/backoffice-psae && pnpm dev\"",
-    "remove:modules": "npx npkill .",
-    "syncpack:check": "npx syncpack list-mismatches",
-    "syncpack:fix": "npx syncpack fix-mismatches ; pnpm i",
-    "syncpack:list": "npx syncpack list",
-    "update:all": "ncu -u"
+    "dev": "concurrently  \"cd apps/web && pnpm dev\" \"cd apps/backoffice-psae && pnpm dev\""
   },
   "engines": {
     "node": ">=18.0.0",
